@@ -1,1 +1,0 @@
-# frontend-component-footer-edx
