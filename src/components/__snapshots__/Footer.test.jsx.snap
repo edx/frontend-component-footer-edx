@@ -33,7 +33,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-language fa-w-20 fa-2x text-primary"
+              className="svg-inline--fa fa-language fa-w-20 fa-2x fa-rotate-null fa-pull-null text-primary"
               data-icon="language"
               data-prefix="fas"
               focusable="false"
@@ -245,7 +245,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="facebook-square"
               data-prefix="fab"
               focusable="false"
@@ -277,7 +277,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="twitter-square"
               data-prefix="fab"
               focusable="false"
@@ -309,7 +309,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-youtube-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-youtube-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="youtube-square"
               data-prefix="fab"
               focusable="false"
@@ -341,7 +341,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="linkedin"
               data-prefix="fab"
               focusable="false"
@@ -373,7 +373,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="reddit-square"
               data-prefix="fab"
               focusable="false"
@@ -629,7 +629,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="facebook-square"
               data-prefix="fab"
               focusable="false"
@@ -661,7 +661,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="twitter-square"
               data-prefix="fab"
               focusable="false"
@@ -693,7 +693,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-youtube-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-youtube-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="youtube-square"
               data-prefix="fab"
               focusable="false"
@@ -725,7 +725,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="linkedin"
               data-prefix="fab"
               focusable="false"
@@ -757,7 +757,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="reddit-square"
               data-prefix="fab"
               focusable="false"
@@ -964,7 +964,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="facebook-square"
               data-prefix="fab"
               focusable="false"
@@ -996,7 +996,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="twitter-square"
               data-prefix="fab"
               focusable="false"
@@ -1028,7 +1028,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-youtube-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-youtube-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="youtube-square"
               data-prefix="fab"
               focusable="false"
@@ -1060,7 +1060,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="linkedin"
               data-prefix="fab"
               focusable="false"
@@ -1092,7 +1092,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x social-icon"
+              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
               data-icon="reddit-square"
               data-prefix="fab"
               focusable="false"

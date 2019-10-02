@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, injectIntl, intlShape } from '@edx/frontend-i18n';
+import { sendTrackEvent } from '@edx/frontend-analytics';
 
 import LinkList from './LinkList';
 import AppleAppStoreButton from './AppleAppStoreButton';
@@ -51,7 +52,7 @@ class SiteFooter extends React.Component {
       category: 'outbound_link',
       label,
     };
-    this.props.handleAllTrackEvents(eventName, properties);
+    sendTrackEvent(eventName, properties);
   }
 
   render() {
@@ -216,7 +217,6 @@ SiteFooter.propTypes = {
     label: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
   })),
-  handleAllTrackEvents: PropTypes.func.isRequired,
 };
 
 SiteFooter.defaultProps = {
