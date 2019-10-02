@@ -17,7 +17,7 @@ const EVENT_NAMES = {
 
 const MARKETING_BASE_URL = 'https://edx.org';
 
-class SiteFooter extends React.Component {
+class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.externalLinkClickHandler = this.externalLinkClickHandler.bind(this);
@@ -209,7 +209,7 @@ class SiteFooter extends React.Component {
   }
 }
 
-SiteFooter.propTypes = {
+Footer.propTypes = {
   intl: intlShape.isRequired,
   logo: PropTypes.string,
   onLanguageSelected: PropTypes.func,
@@ -219,11 +219,11 @@ SiteFooter.propTypes = {
   })),
 };
 
-SiteFooter.defaultProps = {
+Footer.defaultProps = {
   logo: undefined,
   onLanguageSelected: undefined,
   supportedLanguages: [],
 };
 
-export default injectIntl(SiteFooter);
+export default injectIntl(Footer);
 export { EVENT_NAMES };
