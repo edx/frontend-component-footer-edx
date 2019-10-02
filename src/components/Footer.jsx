@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, injectIntl, intlShape } from '@edx/frontend-i18n';
+import { sendTrackEvent } from '@edx/frontend-analytics';
 
 import LinkList from './LinkList';
 import AppleAppStoreButton from './AppleAppStoreButton';
@@ -16,7 +17,7 @@ const EVENT_NAMES = {
 
 const MARKETING_BASE_URL = 'https://edx.org';
 
-class SiteFooter extends React.Component {
+class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.externalLinkClickHandler = this.externalLinkClickHandler.bind(this);
@@ -51,7 +52,7 @@ class SiteFooter extends React.Component {
       category: 'outbound_link',
       label,
     };
-    this.props.handleAllTrackEvents(eventName, properties);
+    sendTrackEvent(eventName, properties);
   }
 
   render() {
@@ -208,7 +209,7 @@ class SiteFooter extends React.Component {
   }
 }
 
-SiteFooter.propTypes = {
+Footer.propTypes = {
   intl: intlShape.isRequired,
   logo: PropTypes.string,
   onLanguageSelected: PropTypes.func,
@@ -216,14 +217,13 @@ SiteFooter.propTypes = {
     label: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
   })),
-  handleAllTrackEvents: PropTypes.func.isRequired,
 };
 
-SiteFooter.defaultProps = {
+Footer.defaultProps = {
   logo: undefined,
   onLanguageSelected: undefined,
   supportedLanguages: [],
 };
 
-export default injectIntl(SiteFooter);
+export default injectIntl(Footer);
 export { EVENT_NAMES };
