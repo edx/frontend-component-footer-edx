@@ -1164,3 +1164,5 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
   </div>
 </footer>
 `;
+
+exports[`<Footer /> renders correctly when hidden should hide itself 1`] = `null`;

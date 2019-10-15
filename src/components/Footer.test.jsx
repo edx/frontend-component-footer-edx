@@ -5,6 +5,7 @@ import { IntlProvider } from '@edx/frontend-i18n';
 import { sendTrackEvent } from '@edx/frontend-analytics';
 
 import Footer, { EVENT_NAMES } from './Footer';
+import { App } from '@edx/frontend-base';
 
 jest.mock('@edx/frontend-analytics');
 
@@ -20,6 +21,7 @@ describe('<Footer />', () => {
         .toJSON();
       expect(tree).toMatchSnapshot();
     });
+
     it('renders without a language selector in es', () => {
       const tree = renderer
         .create((
@@ -30,6 +32,28 @@ describe('<Footer />', () => {
         .toJSON();
       expect(tree).toMatchSnapshot();
     });
+
+    describe('when hidden', () => {
+      beforeEach(() => {
+        App.config.HIDE_FOOTER = true;
+      });
+
+      afterEach(() => {
+        App.config.HIDE_FOOTER = false;
+      });
+
+      it('should hide itself', () => {
+        const tree = renderer
+        .create((
+          <IntlProvider locale="en">
+            <Footer />
+          </IntlProvider>
+        ))
+        .toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+    })
+
     it('renders with a language selector', () => {
       const tree = renderer
         .create((
