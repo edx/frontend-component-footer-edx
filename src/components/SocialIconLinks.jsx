@@ -3,7 +3,6 @@ import { injectIntl, intlShape } from '@edx/frontend-i18n';
 import {
   faFacebookSquare,
   faTwitterSquare,
-  faYoutubeSquare,
   faLinkedin,
   faRedditSquare,
 } from '@fortawesome/free-brands-svg-icons';
@@ -24,12 +23,6 @@ const SocialIconLinks = ({ intl, ...props }) => {
       url: 'https://twitter.com/edXOnline',
       icon: <FontAwesomeIcon icon={faTwitterSquare} className="social-icon" size="2x" />,
       screenReaderText: intl.formatMessage(messages['footer.socialLinks.srText.twitter']),
-    },
-    {
-      title: 'Youtube',
-      url: 'https://www.youtube.com/user/edxonline',
-      icon: <FontAwesomeIcon icon={faYoutubeSquare} className="social-icon" size="2x" />,
-      screenReaderText: intl.formatMessage(messages['footer.socialLinks.srText.youtube']),
     },
     {
       title: 'LinkedIn',
