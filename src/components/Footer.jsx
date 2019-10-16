@@ -1,7 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { FormattedMessage, injectIntl, intlShape } from '@edx/frontend-i18n';
 import { sendTrackEvent } from '@edx/frontend-analytics';
+import { App, APP_CONFIG_LOADED } from '@edx/frontend-base';
+import { FormattedMessage, injectIntl, intlShape } from '@edx/frontend-i18n';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import LinkList from './LinkList';
 import AppleAppStoreButton from './AppleAppStoreButton';
@@ -16,6 +17,14 @@ const EVENT_NAMES = {
 };
 
 const MARKETING_BASE_URL = 'https://edx.org';
+
+// Some MFEs (such as frontend-app-payment) don't want a footer to be shown.
+// This lets them hide it.
+App.subscribe(APP_CONFIG_LOADED, () => {
+  App.mergeConfig({
+    HIDE_FOOTER: !!process.env.HIDE_FOOTER,
+  }, 'Footer additional config');
+});
 
 class Footer extends React.Component {
   constructor(props) {
@@ -64,6 +73,10 @@ class Footer extends React.Component {
     } = this.props;
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const localePrefix = this.getLocalePrefix(intl.locale);
+
+    if (App.config.HIDE_FOOTER) {
+      return null;
+    }
 
     return (
       <footer
