@@ -6,7 +6,6 @@ import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { getConfig } from '@edx/frontend-platform/config';
 
 import Footer, { EVENT_NAMES } from './Footer';
-import messages from '../i18n';
 
 jest.mock('@edx/frontend-platform/analytics');
 jest.mock('@edx/frontend-platform/config');
@@ -29,7 +28,7 @@ describe('<Footer />', () => {
     it('renders without a language selector in es', () => {
       const tree = renderer
         .create((
-          <IntlProvider locale="es" messages={messages['es-419']}>
+          <IntlProvider locale="es">
             <Footer />
           </IntlProvider>
         ))
