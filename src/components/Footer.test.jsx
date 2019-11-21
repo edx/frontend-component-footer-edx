@@ -1,13 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-import { IntlProvider } from '@edx/frontend-i18n';
-import { sendTrackEvent } from '@edx/frontend-analytics';
+import { IntlProvider } from '@edx/frontend-platform/i18n';
+import { sendTrackEvent } from '@edx/frontend-platform/analytics';
+import { getConfig } from '@edx/frontend-platform/config';
 
 import Footer, { EVENT_NAMES } from './Footer';
-import { App } from '@edx/frontend-base';
 
-jest.mock('@edx/frontend-analytics');
+jest.mock('@edx/frontend-platform/analytics');
+jest.mock('@edx/frontend-platform/config');
+
+getConfig.mockReturnValue({});
 
 describe('<Footer />', () => {
   describe('renders correctly', () => {
@@ -35,24 +38,24 @@ describe('<Footer />', () => {
 
     describe('when hidden', () => {
       beforeEach(() => {
-        App.config.HIDE_FOOTER = true;
+        getConfig.mockReturnValue({ HIDE_FOOTER: true });
       });
 
       afterEach(() => {
-        App.config.HIDE_FOOTER = false;
+        getConfig.mockReturnValue({ HIDE_FOOTER: false });
       });
 
       it('should hide itself', () => {
         const tree = renderer
-        .create((
-          <IntlProvider locale="en">
-            <Footer />
-          </IntlProvider>
-        ))
-        .toJSON();
+          .create((
+            <IntlProvider locale="en">
+              <Footer />
+            </IntlProvider>
+          ))
+          .toJSON();
         expect(tree).toMatchSnapshot();
       });
-    })
+    });
 
     it('renders with a language selector', () => {
       const tree = renderer
