@@ -1,7 +1,10 @@
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
-import { APP_CONFIG_INITIALIZED } from '@edx/frontend-platform/init';
-import { subscribe } from '@edx/frontend-platform/pubSub';
-import { mergeConfig, getConfig } from '@edx/frontend-platform/config';
+import {
+  APP_CONFIG_INITIALIZED,
+  mergeConfig,
+  getConfig,
+  subscribe,
+} from '@edx/frontend-platform';
 import { FormattedMessage, injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import PropTypes from 'prop-types';
 import React from 'react';

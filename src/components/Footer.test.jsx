@@ -3,12 +3,12 @@ import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import { IntlProvider } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
-import { getConfig } from '@edx/frontend-platform/config';
+import { getConfig } from '@edx/frontend-platform';
 
 import Footer, { EVENT_NAMES } from './Footer';
 
 jest.mock('@edx/frontend-platform/analytics');
-jest.mock('@edx/frontend-platform/config');
+jest.mock('@edx/frontend-platform');
 
 getConfig.mockReturnValue({});
 
