@@ -205,16 +205,16 @@ class Footer extends React.Component {
               </li>
             </ul>
             <p>
-              © {new Date().getFullYear()} edX Inc. All rights reserved.
+              © 2012–2019 edX Inc.
               <br />
               <FormattedMessage
                 id="footer.trademarks"
-                defaultMessage="{icpMessage}"
+                defaultMessage="EdX, Open edX, and MicroMasters are registered trademarks of edX Inc. {icpMessage}"
                 description="A description of the trademarks that belong to edX."
                 values={{
                   icpMessage: (
                     <React.Fragment>
-                      深圳市恒宇博科技有限公司 <a style={{ textDecoration: 'underline' }} href="http://www.beian.miit.gov.cn">粤ICP备17044299号-2</a>
+                      深圳市恒宇博科技有限公司 <a href="http://www.beian.miit.gov.cn">粤ICP备17044299号-2</a>
                     </React.Fragment>
                   ),
                 }}
