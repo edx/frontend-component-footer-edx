@@ -397,19 +397,13 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
         </li>
       </ul>
       <p>
-        © 
-        2019
-         edX Inc. All rights reserved.
+        © 2012–2019 edX Inc.
         <br />
         <span>
+          EdX, Open edX, and MicroMasters are registered trademarks of edX Inc. 
           深圳市恒宇博科技有限公司 
           <a
             href="http://www.beian.miit.gov.cn"
-            style={
-              Object {
-                "textDecoration": "underline",
-              }
-            }
           >
             粤ICP备17044299号-2
           </a>
@@ -755,19 +749,13 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
         </li>
       </ul>
       <p>
-        © 
-        2019
-         edX Inc. All rights reserved.
+        © 2012–2019 edX Inc.
         <br />
         <span>
+          EdX, Open edX, and MicroMasters are registered trademarks of edX Inc. 
           深圳市恒宇博科技有限公司 
           <a
             href="http://www.beian.miit.gov.cn"
-            style={
-              Object {
-                "textDecoration": "underline",
-              }
-            }
           >
             粤ICP备17044299号-2
           </a>
@@ -1064,19 +1052,13 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
         </li>
       </ul>
       <p>
-        © 
-        2019
-         edX Inc. All rights reserved.
+        © 2012–2019 edX Inc.
         <br />
         <span>
+          EdX, Open edX, and MicroMasters are registered trademarks of edX Inc. 
           深圳市恒宇博科技有限公司 
           <a
             href="http://www.beian.miit.gov.cn"
-            style={
-              Object {
-                "textDecoration": "underline",
-              }
-            }
           >
             粤ICP备17044299号-2
           </a>
