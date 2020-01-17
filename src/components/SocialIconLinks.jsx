@@ -5,6 +5,7 @@ import {
   faTwitterSquare,
   faLinkedin,
   faRedditSquare,
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -29,6 +30,12 @@ const SocialIconLinks = ({ intl, ...props }) => {
       url: 'http://www.linkedin.com/company/edx',
       icon: <FontAwesomeIcon icon={faLinkedin} className="social-icon" size="2x" />,
       screenReaderText: intl.formatMessage(messages['footer.socialLinks.srText.linkedin']),
+    },
+    {
+      title: 'Instagram',
+      url: 'https://www.instagram.com/edxonline/',
+      icon: <FontAwesomeIcon icon={faInstagram} className="social-icon" size="2x" />,
+      screenReaderText: intl.formatMessage(messages['footer.socialLinks.srText.instagram']),
     },
     {
       title: 'Reddit',

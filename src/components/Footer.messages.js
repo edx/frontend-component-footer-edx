@@ -21,6 +21,11 @@ const messages = defineMessages({
     defaultMessage: 'Follow edX on LinkedIn',
     description: 'This is screenreader text for the edX LinkedIn social media link in the footer.',
   },
+  'footer.socialLinks.srText.instagram': {
+    id: 'footer.socialLinks.srText.instagram',
+    defaultMessage: 'Follow edX on Instagram',
+    description: 'This is screenreader text for the edX Instagram social media link in the footer.',
+  },
   'footer.socialLinks.srText.reddit': {
     id: 'footer.socialLinks.srText.reddit',
     defaultMessage: 'Subscribe to the edX subreddit',
