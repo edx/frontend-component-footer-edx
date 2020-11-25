@@ -3,14 +3,12 @@ import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import { IntlProvider } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
-import { getConfig } from '@edx/frontend-platform';
+import { AppContext } from '@edx/frontend-platform/react';
 
 import Footer, { EVENT_NAMES } from './Footer';
 
 jest.mock('@edx/frontend-platform/analytics');
 jest.mock('@edx/frontend-platform');
-
-getConfig.mockReturnValue({});
 
 describe('<Footer />', () => {
   describe('renders correctly', () => {
@@ -18,7 +16,16 @@ describe('<Footer />', () => {
       const tree = renderer
         .create((
           <IntlProvider locale="en">
-            <Footer />
+            <AppContext.Provider
+              value={{
+                authenticatedUser: null,
+                config: {
+                  LOGO_TRADEMARK_URL: process.env.LOGO_TRADEMARK_URL,
+                },
+              }}
+            >
+              <Footer />
+            </AppContext.Provider>
           </IntlProvider>
         ))
         .toJSON();
@@ -29,7 +36,16 @@ describe('<Footer />', () => {
       const tree = renderer
         .create((
           <IntlProvider locale="es">
-            <Footer />
+            <AppContext.Provider
+              value={{
+                authenticatedUser: null,
+                config: {
+                  LOGO_TRADEMARK_URL: process.env.LOGO_TRADEMARK_URL,
+                },
+              }}
+            >
+              <Footer />
+            </AppContext.Provider>
           </IntlProvider>
         ))
         .toJSON();
@@ -37,19 +53,21 @@ describe('<Footer />', () => {
     });
 
     describe('when hidden', () => {
-      beforeEach(() => {
-        getConfig.mockReturnValue({ HIDE_FOOTER: true });
-      });
-
-      afterEach(() => {
-        getConfig.mockReturnValue({ HIDE_FOOTER: false });
-      });
-
       it('should hide itself', () => {
         const tree = renderer
           .create((
             <IntlProvider locale="en">
-              <Footer />
+              <AppContext.Provider
+                value={{
+                  authenticatedUser: null,
+                  config: {
+                    LOGO_TRADEMARK_URL: process.env.LOGO_TRADEMARK_URL,
+                    HIDE_FOOTER: true,
+                  },
+                }}
+              >
+                <Footer />
+              </AppContext.Provider>
             </IntlProvider>
           ))
           .toJSON();
@@ -61,13 +79,22 @@ describe('<Footer />', () => {
       const tree = renderer
         .create((
           <IntlProvider locale="en">
-            <Footer
-              onLanguageSelected={() => {}}
-              supportedLanguages={[
-                { label: 'English', value: 'en' },
-                { label: 'Español', value: 'es' },
-              ]}
-            />
+            <AppContext.Provider
+              value={{
+                authenticatedUser: null,
+                config: {
+                  LOGO_TRADEMARK_URL: process.env.LOGO_TRADEMARK_URL,
+                },
+              }}
+            >
+              <Footer
+                onLanguageSelected={() => {}}
+                supportedLanguages={[
+                  { label: 'English', value: 'en' },
+                  { label: 'Español', value: 'es' },
+                ]}
+              />
+            </AppContext.Provider>
           </IntlProvider>
         ))
         .toJSON();
@@ -79,7 +106,16 @@ describe('<Footer />', () => {
     it('calls sendTrackEvent prop when external links clicked', () => {
       const wrapper = mount((
         <IntlProvider locale="en">
-          <Footer />
+          <AppContext.Provider
+            value={{
+              authenticatedUser: null,
+              config: {
+                LOGO_TRADEMARK_URL: process.env.LOGO_TRADEMARK_URL,
+              },
+            }}
+          >
+            <Footer />
+          </AppContext.Provider>
         </IntlProvider>
       ));
       const externalLinks = wrapper.find("a[target='_blank']");
@@ -105,13 +141,22 @@ describe('<Footer />', () => {
       const mockHandleLanguageSelected = jest.fn();
       const wrapper = mount((
         <IntlProvider locale="en">
-          <Footer
-            onLanguageSelected={mockHandleLanguageSelected}
-            supportedLanguages={[
-              { label: 'English', value: 'en' },
-              { label: 'Español', value: 'es' },
-            ]}
-          />
+          <AppContext.Provider
+            value={{
+              authenticatedUser: null,
+              config: {
+                LOGO_TRADEMARK_URL: process.env.LOGO_TRADEMARK_URL,
+              },
+            }}
+          >
+            <Footer
+              onLanguageSelected={mockHandleLanguageSelected}
+              supportedLanguages={[
+                { label: 'English', value: 'en' },
+                { label: 'Español', value: 'es' },
+              ]}
+            />
+          </AppContext.Provider>
         </IntlProvider>
       ));
 
