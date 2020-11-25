@@ -18,7 +18,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       >
         <img
           alt="edX Logo"
-          src="https://edx-cdn.org/v3/default/logo-trademark.svg"
+          src="https://edx-cdn.org/v3/prod/logo-trademark.svg"
           style={
             Object {
               "maxHeight": 45,
@@ -476,7 +476,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       >
         <img
           alt="edX Logo"
-          src="https://edx-cdn.org/v3/default/logo-trademark.svg"
+          src="https://edx-cdn.org/v3/prod/logo-trademark.svg"
           style={
             Object {
               "maxHeight": 45,
@@ -871,7 +871,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       >
         <img
           alt="edX Logo"
-          src="https://edx-cdn.org/v3/default/logo-trademark.svg"
+          src="https://edx-cdn.org/v3/prod/logo-trademark.svg"
           style={
             Object {
               "maxHeight": 45,
