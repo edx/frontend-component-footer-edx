@@ -7,7 +7,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
   role="contentinfo"
 >
   <div
-    className="max-width-1180 d-grid"
+    className="container-fluid d-grid"
   >
     <div
       className="area-1"
@@ -18,17 +18,23 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       >
         <img
           alt="edX Logo"
-          src="test-file-stub"
+          src="https://edx-cdn.org/v3/prod/logo-trademark.svg"
+          style={
+            Object {
+              "maxHeight": 45,
+            }
+          }
         />
       </a>
       <div
-        className="i18n d-flex mt-2"
+        className="i18n d-flex mt-4"
       >
         <form
-          className="d-flex align-items-start"
+          className="d-flex align-items-center"
           onSubmit={[Function]}
         >
           <label
+            className="m-0"
             htmlFor="site-footer-language-select"
           >
             <svg
@@ -57,7 +63,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
             </div>
           </label>
           <select
-            className="mx-2 mt-1"
+            className="mx-2"
             defaultValue="en"
             id="site-footer-language-select"
             name="site-footer-language-select"
@@ -74,7 +80,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
             </option>
           </select>
           <button
-            className="mt-1"
+            className="btn btn-outline-primary btn-sm"
             type="submit"
           >
             <span>
@@ -459,7 +465,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
   role="contentinfo"
 >
   <div
-    className="max-width-1180 d-grid"
+    className="container-fluid d-grid"
   >
     <div
       className="area-1"
@@ -470,7 +476,12 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       >
         <img
           alt="edX Logo"
-          src="test-file-stub"
+          src="https://edx-cdn.org/v3/prod/logo-trademark.svg"
+          style={
+            Object {
+              "maxHeight": 45,
+            }
+          }
         />
       </a>
     </div>
@@ -849,7 +860,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
   role="contentinfo"
 >
   <div
-    className="max-width-1180 d-grid"
+    className="container-fluid d-grid"
   >
     <div
       className="area-1"
@@ -860,7 +871,12 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       >
         <img
           alt="edX Logo"
-          src="test-file-stub"
+          src="https://edx-cdn.org/v3/prod/logo-trademark.svg"
+          style={
+            Object {
+              "maxHeight": 45,
+            }
+          }
         />
       </a>
     </div>

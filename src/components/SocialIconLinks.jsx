@@ -58,7 +58,7 @@ const SocialIconLinks = ({ intl, ...props }) => {
     </li>
   ));
 
-  return <React.Fragment>{iconLinks}</React.Fragment>;
+  return <>{iconLinks}</>;
 };
 
 SocialIconLinks.propTypes = {

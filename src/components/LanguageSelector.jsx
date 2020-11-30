@@ -15,12 +15,12 @@ const LanguageSelector = ({
 
   return (
     <form
-      className="d-flex align-items-start"
+      className="d-flex align-items-center"
       onSubmit={handleSubmit}
       {...props}
     >
-      {/* eslint-disable-next-line jsx-a11y/label-has-for */}
-      <label htmlFor="site-footer-language-select">
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+      <label htmlFor="site-footer-language-select" className="m-0">
         <FontAwesomeIcon icon={faLanguage} size="2x" className="text-primary" />
         <div className="sr-only">
           <FormattedMessage
@@ -32,14 +32,13 @@ const LanguageSelector = ({
       </label>
       <select
         id="site-footer-language-select"
-        className="mx-2 mt-1"
+        className="mx-2"
         name="site-footer-language-select"
         defaultValue={intl.locale}
       >
-        {options.map(({ value, label }) =>
-          <option key={value} value={value}>{label}</option>)}
+        {options.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}
       </select>
-      <button className="mt-1" type="submit">
+      <button className="btn btn-outline-primary btn-sm" type="submit">
         <FormattedMessage
           id="footer.languageForm.submit.label"
           defaultMessage="Apply"

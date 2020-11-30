@@ -1,21 +1,25 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import {
   APP_CONFIG_INITIALIZED,
   mergeConfig,
-  getConfig,
   subscribe,
 } from '@edx/frontend-platform';
 import { FormattedMessage, injectIntl, intlShape } from '@edx/frontend-platform/i18n';
-import PropTypes from 'prop-types';
-import React from 'react';
+import { ensureConfig } from '@edx/frontend-platform/config';
+import { AppContext } from '@edx/frontend-platform/react';
 
 import LinkList from './LinkList';
 import AppleAppStoreButton from './AppleAppStoreButton';
 import GooglePlayStoreButton from './GooglePlayStoreButton';
 import SocialIconLinks from './SocialIconLinks';
 import messages from './Footer.messages';
-import FooterLogo from '../edx-footer.png';
 import LanguageSelector from './LanguageSelector';
+
+ensureConfig([
+  'LOGO_TRADEMARK_URL',
+], 'Footer component');
 
 const EVENT_NAMES = {
   FOOTER_LINK: 'edx.bi.footer.link',
@@ -79,7 +83,9 @@ class Footer extends React.Component {
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const localePrefix = this.getLocalePrefix(intl.locale);
 
-    if (getConfig().HIDE_FOOTER) {
+    const { config } = this.context;
+
+    if (config.HIDE_FOOTER) {
       return null;
     }
 
@@ -89,19 +95,23 @@ class Footer extends React.Component {
         aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
         className="footer d-flex justify-content-center border-top py-3 px-4"
       >
-        <div className="max-width-1180 d-grid">
+        <div className="container-fluid d-grid">
           <div className="area-1">
             <a
               href="https://edx.org"
               aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
             >
-              <img src={logo || FooterLogo} alt={intl.formatMessage(messages['footer.logo.altText'])} />
+              <img
+                src={logo || config.LOGO_TRADEMARK_URL}
+                alt={intl.formatMessage(messages['footer.logo.altText'])}
+                style={{ maxHeight: 45 }}
+              />
             </a>
-            {showLanguageSelector &&
-              <div className="i18n d-flex mt-2">
+            {showLanguageSelector && (
+              <div className="i18n d-flex mt-4">
                 <LanguageSelector options={supportedLanguages} onSubmit={onLanguageSelected} />
               </div>
-            }
+            )}
           </div>
           <LinkList
             className="area-2"
@@ -213,9 +223,9 @@ class Footer extends React.Component {
                 description="A description of the trademarks that belong to edX."
                 values={{
                   icpMessage: (
-                    <React.Fragment>
+                    <>
                       深圳市恒宇博科技有限公司 <a style={{ textDecoration: 'underline' }} href="http://www.beian.miit.gov.cn">粤ICP备17044299号-2</a>
-                    </React.Fragment>
+                    </>
                   ),
                 }}
               />
@@ -226,6 +236,8 @@ class Footer extends React.Component {
     );
   }
 }
+
+Footer.contextType = AppContext;
 
 Footer.propTypes = {
   intl: intlShape.isRequired,

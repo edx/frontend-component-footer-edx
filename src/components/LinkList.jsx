@@ -10,7 +10,9 @@ const LinkList = ({
       {links.map(({
         title, href, hidden, ...linkProps
       }) => {
-        if (hidden) return null;
+        if (hidden) {
+          return null;
+        }
         return (
           <li key={`${href}${title}`} {...linkProps}>
             <a href={href}>{title}</a>
