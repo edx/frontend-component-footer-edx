@@ -436,7 +436,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       </ul>
       <p>
         © 
-        2020
+        2021
          edX Inc. All rights reserved.
         <br />
         <span>
@@ -831,7 +831,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       </ul>
       <p>
         © 
-        2020
+        2021
          edX Inc. All rights reserved.
         <br />
         <span>
@@ -1177,7 +1177,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       </ul>
       <p>
         © 
-        2020
+        2021
          edX Inc. All rights reserved.
         <br />
         <span>
