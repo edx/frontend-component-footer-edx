@@ -442,7 +442,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
         <span>
           深圳市恒宇博科技有限公司 
           <a
-            href="http://www.beian.miit.gov.cn"
+            href="https://beian.miit.gov.cn"
             style={
               Object {
                 "textDecoration": "underline",
@@ -837,7 +837,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
         <span>
           深圳市恒宇博科技有限公司 
           <a
-            href="http://www.beian.miit.gov.cn"
+            href="https://beian.miit.gov.cn"
             style={
               Object {
                 "textDecoration": "underline",
@@ -1183,7 +1183,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
         <span>
           深圳市恒宇博科技有限公司 
           <a
-            href="http://www.beian.miit.gov.cn"
+            href="https://beian.miit.gov.cn"
             style={
               Object {
                 "textDecoration": "underline",

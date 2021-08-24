@@ -224,7 +224,7 @@ class Footer extends React.Component {
                 values={{
                   icpMessage: (
                     <>
-                      深圳市恒宇博科技有限公司 <a style={{ textDecoration: 'underline' }} href="http://www.beian.miit.gov.cn">粤ICP备17044299号-2</a>
+                      深圳市恒宇博科技有限公司 <a style={{ textDecoration: 'underline' }} href="https://beian.miit.gov.cn">粤ICP备17044299号-2</a>
                     </>
                   ),
                 }}
