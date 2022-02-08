@@ -226,13 +226,6 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
             Media Kit
           </a>
         </li>
-        <li>
-          <a
-            href="https://edx.org/donate"
-          >
-            Donate
-          </a>
-        </li>
       </ul>
     </div>
     <div
@@ -436,7 +429,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       </ul>
       <p>
         © 
-        2021
+        2022
          edX Inc. All rights reserved.
         <br />
         <span>
@@ -621,13 +614,6 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
             Media Kit
           </a>
         </li>
-        <li>
-          <a
-            href="https://edx.org/donate"
-          >
-            Donate
-          </a>
-        </li>
       </ul>
     </div>
     <div
@@ -831,7 +817,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       </ul>
       <p>
         © 
-        2021
+        2022
          edX Inc. All rights reserved.
         <br />
         <span>
@@ -1177,7 +1163,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       </ul>
       <p>
         © 
-        2021
+        2022
          edX Inc. All rights reserved.
         <br />
         <span>

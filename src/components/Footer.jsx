@@ -195,11 +195,6 @@ class Footer extends React.Component {
                 title: intl.formatMessage(messages['footer.connectLinks.mediaKit']),
                 hidden: intl.locale === 'es',
               },
-              {
-                href: `${MARKETING_BASE_URL}${localePrefix}/donate`,
-                title: intl.formatMessage(messages['footer.connectLinks.donate']),
-                hidden: intl.locale === 'es',
-              },
             ]}
           />
           <div className="area-5">

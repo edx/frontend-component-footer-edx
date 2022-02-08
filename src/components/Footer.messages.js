@@ -126,11 +126,6 @@ const messages = defineMessages({
     defaultMessage: 'Media Kit',
     description: 'The label for the link to the edX media kit page.',
   },
-  'footer.connectLinks.donate': {
-    id: 'footer.connectLinks.donate',
-    defaultMessage: 'Donate',
-    description: 'The label for the link to the edX donation page.',
-  },
   'footer.mobileApp.apple': {
     id: 'footer.mobileApp.apple',
     defaultMessage: 'Download the edX mobile app from the Apple App Store',
