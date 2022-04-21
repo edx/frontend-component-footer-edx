@@ -430,7 +430,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       <p>
         © 
         2022
-         edX Inc. All rights reserved.
+         edX LLC. All rights reserved.
         <br />
         <span>
           深圳市恒宇博科技有限公司 
@@ -818,7 +818,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       <p>
         © 
         2022
-         edX Inc. All rights reserved.
+         edX LLC. All rights reserved.
         <br />
         <span>
           深圳市恒宇博科技有限公司 
@@ -1164,7 +1164,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       <p>
         © 
         2022
-         edX Inc. All rights reserved.
+         edX LLC. All rights reserved.
         <br />
         <span>
           深圳市恒宇博科技有限公司 
