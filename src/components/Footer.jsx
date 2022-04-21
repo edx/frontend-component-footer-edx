@@ -210,7 +210,7 @@ class Footer extends React.Component {
               </li>
             </ul>
             <p>
-              © {new Date().getFullYear()} edX Inc. All rights reserved.
+              © {new Date().getFullYear()} edX LLC. All rights reserved.
               <br />
               <FormattedMessage
                 id="footer.trademarks"
