@@ -1,7 +1,7 @@
 frontend-component-footer-edx
 =============================
 
-|Build Status| |Coveralls| |npm_version| |npm_downloads| |license|
+|Build Status| |npm_version| |npm_downloads| |license|
 |semantic-release|
 
 frontend-component-footer-edx is a library containing a site footer
@@ -50,8 +50,6 @@ Build the component::
 
 .. |Build Status| image:: https://api.travis-ci.com/edx/frontend-component-footer-edx.svg?branch=master
    :target: https://travis-ci.com/edx/frontend-component-footer-edx
-.. |Coveralls| image:: https://img.shields.io/coveralls/edx/frontend-component-footer-edx.svg?branch=master
-   :target: https://coveralls.io/github/edx/frontend-component-footer-edx
 .. |npm_version| image:: https://img.shields.io/npm/v/@edx/frontend-component-footer-edx.svg
    :target: @edx/frontend-component-footer-edx
 .. |npm_downloads| image:: https://img.shields.io/npm/dt/@edx/frontend-component-footer-edx.svg
