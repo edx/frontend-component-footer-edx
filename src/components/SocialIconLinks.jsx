@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import messages from './Footer.messages';
 
-const SocialIconLinks = ({ intl, ...props }) => {
+function SocialIconLinks({ intl, ...props }) {
   const iconLinks = [
     {
       title: 'Facebook',
@@ -58,8 +58,8 @@ const SocialIconLinks = ({ intl, ...props }) => {
     </li>
   ));
 
-  return <>{iconLinks}</>;
-};
+  return iconLinks;
+}
 
 SocialIconLinks.propTypes = {
   intl: intlShape.isRequired,

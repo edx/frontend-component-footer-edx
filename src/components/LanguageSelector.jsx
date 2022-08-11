@@ -4,9 +4,9 @@ import { injectIntl, intlShape, FormattedMessage } from '@edx/frontend-platform/
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const LanguageSelector = ({
+function LanguageSelector({
   intl, options, onSubmit, ...props
-}) => {
+}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const languageCode = e.target.elements['site-footer-language-select'].value;
@@ -47,7 +47,7 @@ const LanguageSelector = ({
       </button>
     </form>
   );
-};
+}
 
 LanguageSelector.propTypes = {
   intl: intlShape.isRequired,
