@@ -191,6 +191,10 @@ class Footer extends React.Component {
                 title: intl.formatMessage(messages['footer.connectLinks.help']),
               },
               {
+                href: `${MARKETING_BASE_URL}${localePrefix}/policy/security`,
+                title: intl.formatMessage(messages['footer.connectLinks.security']),
+              },
+              {
                 href: `${MARKETING_BASE_URL}${localePrefix}/media-kit`,
                 title: intl.formatMessage(messages['footer.connectLinks.mediaKit']),
                 hidden: intl.locale === 'es',
