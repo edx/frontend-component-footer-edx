@@ -217,6 +217,13 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
         </li>
         <li>
           <a
+            href="https://edx.org/policy/security"
+          >
+            Security
+          </a>
+        </li>
+        <li>
+          <a
             href="https://edx.org/media-kit"
           >
             Media Kit
@@ -603,6 +610,13 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
         </li>
         <li>
           <a
+            href="https://edx.org/policy/security"
+          >
+            Security
+          </a>
+        </li>
+        <li>
+          <a
             href="https://edx.org/media-kit"
           >
             Media Kit
@@ -950,6 +964,13 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
             href="https://support.edx.org"
           >
             Help Center
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://edx.org/es/policy/security"
+          >
+            Security
           </a>
         </li>
       </ul>
