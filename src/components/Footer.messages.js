@@ -121,6 +121,11 @@ const messages = defineMessages({
     defaultMessage: 'Help Center',
     description: 'The label for the link to the edX help center.',
   },
+  'footer.connectLinks.security': {
+    id: 'footer.connectLinks.security',
+    defaultMessage: 'Security',
+    description: 'The label for the link to the security disclosures page.',
+  },
   'footer.connectLinks.mediaKit': {
     id: 'footer.connectLinks.mediaKit',
     defaultMessage: 'Media Kit',
