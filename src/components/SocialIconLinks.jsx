@@ -57,8 +57,8 @@ function SocialIconLinks({ intl, ...props }) {
       </a>
     </li>
   ));
-
-  return iconLinks;
+  // eslint-disable-next-line react/jsx-no-useless-fragment
+  return <>{iconLinks}</>;
 }
 
 SocialIconLinks.propTypes = {
