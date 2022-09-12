@@ -172,6 +172,12 @@ class Footer extends React.Component {
                 title: intl.formatMessage(messages['footer.legalLinks.sitemap']),
                 hidden: intl.locale === 'es',
               },
+              {
+                title: 'Do not sell my personal data',
+                id: 'ot-sdk-btn',
+                className: 'ot-sdk-show-settings',
+
+              }
             ]}
           />
           <LinkList
