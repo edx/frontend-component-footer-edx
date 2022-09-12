@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from '@edx/paragon';
 
 const LinkList = ({
   title: listTitle, links = [], ...props
@@ -12,6 +13,13 @@ const LinkList = ({
       }) => {
         if (hidden) {
           return null;
+        }
+        if (!href) {
+          return (
+            <li key={`${title}`}>
+              <Button {...linkProps}>{title}</Button>
+            </li>
+          )
         }
         return (
           <li key={`${href}${title}`} {...linkProps}>
