@@ -156,6 +156,11 @@ const messages = defineMessages({
     defaultMessage: 'Page Footer',
     description: 'aria-label for the footer component',
   },
+  'footer.doNotSellData': {
+    id: 'footer.doNotSellData',
+    defaultMessage: 'Do Not Sell My Personal Data',
+    description: 'link button that leads to the cookie settings menu',
+  }
 });
 
 export default messages;
