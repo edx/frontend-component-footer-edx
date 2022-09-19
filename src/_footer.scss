@@ -34,6 +34,10 @@
   font-weight: 400 !important;
   color:  #00688D !important;
   padding: 0 !important;
+
+  &.hide-one-trust {
+    display: none !important;
+  }
 }
 
 $gray-footer: #fcfcfc;
