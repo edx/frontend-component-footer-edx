@@ -173,10 +173,9 @@ class Footer extends React.Component {
                 hidden: intl.locale === 'es',
               },
               {
-                title: 'Do not sell my personal data',
+                title: intl.formatMessage(messages['footer.doNotSellData']),
                 id: 'ot-sdk-btn',
-                className: 'ot-sdk-show-settings',
-
+                className: `ot-sdk-show-settings ${typeof OneTrust === 'undefined' && 'hide-one-trust'}`,
               }
             ]}
           />
