@@ -11,7 +11,7 @@ import Footer, { EVENT_NAMES } from './Footer';
 jest.mock('@edx/frontend-platform/analytics');
 jest.mock('@edx/frontend-platform');
 
-function FooterWithoutLanguageSelector({ locale = 'en', config }) {
+const FooterWithoutLanguageSelector = ({ locale = 'en', config }) => {
   const contextValue = useMemo(() => ({
     authenticatedUser: null,
     config,
@@ -26,9 +26,9 @@ function FooterWithoutLanguageSelector({ locale = 'en', config }) {
       </AppContext.Provider>
     </IntlProvider>
   );
-}
+};
 
-function FooterWithLanguageSelector({ onLanguageSelected = () => {} }) {
+const FooterWithLanguageSelector = ({ onLanguageSelected = () => {} }) => {
   const contextValue = useMemo(() => ({
     authenticatedUser: null,
     config: {
@@ -51,7 +51,7 @@ function FooterWithLanguageSelector({ onLanguageSelected = () => {} }) {
       </AppContext.Provider>
     </IntlProvider>
   );
-}
+};
 
 describe('<Footer />', () => {
   describe('renders correctly', () => {

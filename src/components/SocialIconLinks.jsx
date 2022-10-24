@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import messages from './Footer.messages';
 
-function SocialIconLinks({ intl, ...props }) {
+const SocialIconLinks = ({ intl, ...props }) => {
   const iconLinks = [
     {
       title: 'Facebook',
@@ -59,7 +59,7 @@ function SocialIconLinks({ intl, ...props }) {
   ));
   // eslint-disable-next-line react/jsx-no-useless-fragment
   return <>{iconLinks}</>;
-}
+};
 
 SocialIconLinks.propTypes = {
   intl: intlShape.isRequired,
