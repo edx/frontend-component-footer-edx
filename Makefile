@@ -50,8 +50,8 @@ push_translations:
 	./node_modules/@edx/reactifex/bash_scripts/put_comments_v3.sh
 
 # Pulls translations from Transifex.
-pull_translations:
-	tx pull -f --mode reviewed --languages=$(transifex_langs)
+pull_translations: ## pull translations from Transifex
+	tx pull -t -f --mode reviewed --languages=$(transifex_langs)
 
 # This target is used by Travis.
 validate-no-uncommitted-package-lock-changes:
