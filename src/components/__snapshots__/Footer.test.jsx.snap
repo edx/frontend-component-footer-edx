@@ -39,7 +39,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-language fa-w-20 fa-2x fa-rotate-null fa-pull-null text-primary"
+              className="svg-inline--fa fa-language fa-w-20 fa-2x text-primary"
               data-icon="language"
               data-prefix="fas"
               focusable="false"
@@ -57,9 +57,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
             <div
               className="sr-only"
             >
-              <span>
-                Choose Language
-              </span>
+              Choose Language
             </div>
           </label>
           <select
@@ -83,9 +81,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
             className="btn btn-outline-primary btn-sm"
             type="submit"
           >
-            <span>
-              Apply
-            </span>
+            Apply
           </button>
         </form>
       </div>
@@ -221,6 +217,13 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
         </li>
         <li>
           <a
+            href="https://edx.org/policy/security"
+          >
+            Security
+          </a>
+        </li>
+        <li>
+          <a
             href="https://edx.org/media-kit"
           >
             Media Kit
@@ -244,7 +247,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x social-icon"
               data-icon="facebook-square"
               data-prefix="fab"
               focusable="false"
@@ -276,7 +279,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x social-icon"
               data-icon="twitter-square"
               data-prefix="fab"
               focusable="false"
@@ -308,7 +311,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x social-icon"
               data-icon="linkedin"
               data-prefix="fab"
               focusable="false"
@@ -340,7 +343,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-instagram fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-instagram fa-w-14 fa-2x social-icon"
               data-icon="instagram"
               data-prefix="fab"
               focusable="false"
@@ -372,7 +375,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x social-icon"
               data-icon="reddit-square"
               data-prefix="fab"
               focusable="false"
@@ -430,21 +433,19 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       <p>
         © 
         2022
-         edX Inc. All rights reserved.
+         edX LLC. All rights reserved.
         <br />
-        <span>
-          深圳市恒宇博科技有限公司 
-          <a
-            href="https://beian.miit.gov.cn"
-            style={
-              Object {
-                "textDecoration": "underline",
-              }
+        深圳市恒宇博科技有限公司 
+        <a
+          href="https://beian.miit.gov.cn"
+          style={
+            Object {
+              "textDecoration": "underline",
             }
-          >
-            粤ICP备17044299号-2
-          </a>
-        </span>
+          }
+        >
+          粤ICP备17044299号-2
+        </a>
       </p>
     </div>
   </div>
@@ -609,6 +610,13 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
         </li>
         <li>
           <a
+            href="https://edx.org/policy/security"
+          >
+            Security
+          </a>
+        </li>
+        <li>
+          <a
             href="https://edx.org/media-kit"
           >
             Media Kit
@@ -632,7 +640,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x social-icon"
               data-icon="facebook-square"
               data-prefix="fab"
               focusable="false"
@@ -664,7 +672,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x social-icon"
               data-icon="twitter-square"
               data-prefix="fab"
               focusable="false"
@@ -696,7 +704,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x social-icon"
               data-icon="linkedin"
               data-prefix="fab"
               focusable="false"
@@ -728,7 +736,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-instagram fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-instagram fa-w-14 fa-2x social-icon"
               data-icon="instagram"
               data-prefix="fab"
               focusable="false"
@@ -760,7 +768,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x social-icon"
               data-icon="reddit-square"
               data-prefix="fab"
               focusable="false"
@@ -818,21 +826,19 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       <p>
         © 
         2022
-         edX Inc. All rights reserved.
+         edX LLC. All rights reserved.
         <br />
-        <span>
-          深圳市恒宇博科技有限公司 
-          <a
-            href="https://beian.miit.gov.cn"
-            style={
-              Object {
-                "textDecoration": "underline",
-              }
+        深圳市恒宇博科技有限公司 
+        <a
+          href="https://beian.miit.gov.cn"
+          style={
+            Object {
+              "textDecoration": "underline",
             }
-          >
-            粤ICP备17044299号-2
-          </a>
-        </span>
+          }
+        >
+          粤ICP备17044299号-2
+        </a>
       </p>
     </div>
   </div>
@@ -960,6 +966,13 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
             Help Center
           </a>
         </li>
+        <li>
+          <a
+            href="https://edx.org/es/policy/security"
+          >
+            Security
+          </a>
+        </li>
       </ul>
     </div>
     <div
@@ -978,7 +991,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x social-icon"
               data-icon="facebook-square"
               data-prefix="fab"
               focusable="false"
@@ -1010,7 +1023,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x social-icon"
               data-icon="twitter-square"
               data-prefix="fab"
               focusable="false"
@@ -1042,7 +1055,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x social-icon"
               data-icon="linkedin"
               data-prefix="fab"
               focusable="false"
@@ -1074,7 +1087,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-instagram fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-instagram fa-w-14 fa-2x social-icon"
               data-icon="instagram"
               data-prefix="fab"
               focusable="false"
@@ -1106,7 +1119,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x fa-rotate-null fa-pull-null social-icon"
+              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x social-icon"
               data-icon="reddit-square"
               data-prefix="fab"
               focusable="false"
@@ -1164,21 +1177,19 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       <p>
         © 
         2022
-         edX Inc. All rights reserved.
+         edX LLC. All rights reserved.
         <br />
-        <span>
-          深圳市恒宇博科技有限公司 
-          <a
-            href="https://beian.miit.gov.cn"
-            style={
-              Object {
-                "textDecoration": "underline",
-              }
+        深圳市恒宇博科技有限公司 
+        <a
+          href="https://beian.miit.gov.cn"
+          style={
+            Object {
+              "textDecoration": "underline",
             }
-          >
-            粤ICP备17044299号-2
-          </a>
-        </span>
+          }
+        >
+          粤ICP备17044299号-2
+        </a>
       </p>
     </div>
   </div>
