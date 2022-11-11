@@ -121,15 +121,15 @@ const messages = defineMessages({
     defaultMessage: 'Help Center',
     description: 'The label for the link to the edX help center.',
   },
+  'footer.connectLinks.security': {
+    id: 'footer.connectLinks.security',
+    defaultMessage: 'Security',
+    description: 'The label for the link to the security disclosures page.',
+  },
   'footer.connectLinks.mediaKit': {
     id: 'footer.connectLinks.mediaKit',
     defaultMessage: 'Media Kit',
     description: 'The label for the link to the edX media kit page.',
-  },
-  'footer.connectLinks.donate': {
-    id: 'footer.connectLinks.donate',
-    defaultMessage: 'Donate',
-    description: 'The label for the link to the edX donation page.',
   },
   'footer.mobileApp.apple': {
     id: 'footer.mobileApp.apple',

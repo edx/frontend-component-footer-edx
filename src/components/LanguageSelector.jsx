@@ -26,7 +26,7 @@ const LanguageSelector = ({
           <FormattedMessage
             id="footer.languageForm.select.label"
             defaultMessage="Choose Language"
-            description="The label for the laguage select part of the language selection form."
+            description="The label for the language select part of the language selection form."
           />
         </div>
       </label>
@@ -42,7 +42,7 @@ const LanguageSelector = ({
         <FormattedMessage
           id="footer.languageForm.submit.label"
           defaultMessage="Apply"
-          description="The label for button to submit the language selection form."
+          description="Label for button to submit the language selection form."
         />
       </button>
     </form>

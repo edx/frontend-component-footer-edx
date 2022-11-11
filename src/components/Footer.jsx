@@ -191,13 +191,12 @@ class Footer extends React.Component {
                 title: intl.formatMessage(messages['footer.connectLinks.help']),
               },
               {
-                href: `${MARKETING_BASE_URL}${localePrefix}/media-kit`,
-                title: intl.formatMessage(messages['footer.connectLinks.mediaKit']),
-                hidden: intl.locale === 'es',
+                href: `${MARKETING_BASE_URL}${localePrefix}/policy/security`,
+                title: intl.formatMessage(messages['footer.connectLinks.security']),
               },
               {
-                href: `${MARKETING_BASE_URL}${localePrefix}/donate`,
-                title: intl.formatMessage(messages['footer.connectLinks.donate']),
+                href: `${MARKETING_BASE_URL}${localePrefix}/media-kit`,
+                title: intl.formatMessage(messages['footer.connectLinks.mediaKit']),
                 hidden: intl.locale === 'es',
               },
             ]}
@@ -215,7 +214,7 @@ class Footer extends React.Component {
               </li>
             </ul>
             <p>
-              © {new Date().getFullYear()} edX Inc. All rights reserved.
+              © {new Date().getFullYear()} edX LLC. All rights reserved.
               <br />
               <FormattedMessage
                 id="footer.trademarks"

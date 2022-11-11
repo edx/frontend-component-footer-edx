@@ -1,8 +1,15 @@
 name: Default CI
-on: [push, pull_request]
+on:
+  push:
+    branches:
+    - master
+  pull_request:
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [16]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -11,7 +18,7 @@ jobs:
     - name: Setup Nodejs
       uses: actions/setup-node@v2
       with:
-        node-version: 12
+        node-version: ${{ matrix.node }}
     - name: Install dependencies
       run: npm ci
     - name: Validate package-lock.json changes
@@ -20,6 +27,8 @@ jobs:
       run: npm run lint
     - name: Test
       run: npm run test
+    - name: Build
+      run: npm run build
     - name: i18n_extract
       run: npm run i18n_extract
     - name: Coverage
