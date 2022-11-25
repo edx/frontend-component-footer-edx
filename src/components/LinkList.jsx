@@ -19,7 +19,7 @@ const LinkList = ({
             <li key={`${title}`}>
               <Button {...linkProps}>{title}</Button>
             </li>
-          )
+          );
         }
         return (
           <li key={`${href}${title}`} {...linkProps}>
