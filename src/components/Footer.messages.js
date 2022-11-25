@@ -155,7 +155,7 @@ const messages = defineMessages({
     id: 'footer.doNotSellData',
     defaultMessage: 'Do Not Sell My Personal Data',
     description: 'link button that leads to the cookie settings menu',
-  }
+  },
 });
 
 export default messages;
