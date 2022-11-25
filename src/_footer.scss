@@ -185,3 +185,9 @@ $border-1: 1px solid $gray-200;
     }
   }
 }
+
+.ccpa-dialog .pgn__form-switch-input {
+  flex-shrink: 0;
+  margin-right: 0;
+  align-self: center;
+}
