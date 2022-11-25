@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { initialize, getConfig, subscribe, APP_READY } from '@edx/frontend-platform';
 import { AppContext, AppProvider } from '@edx/frontend-platform/react';
-import Footer from '@edx/frontend-component-footer';
+import { Footer } from '@edx/frontend-component-footer';
 
 import './index.scss';
 
