@@ -183,6 +183,17 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
             Sitemap
           </a>
         </li>
+        <li>
+          <button
+            className="ot-sdk-show-settings hide-one-trust btn btn-primary"
+            disabled={false}
+            id="ot-sdk-btn"
+            onClick={[Function]}
+            type="button"
+          >
+            Do Not Sell My Personal Data
+          </button>
+        </li>
       </ul>
     </div>
     <div
@@ -576,6 +587,17 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
             Sitemap
           </a>
         </li>
+        <li>
+          <button
+            className="ot-sdk-show-settings hide-one-trust btn btn-primary"
+            disabled={false}
+            id="ot-sdk-btn"
+            onClick={[Function]}
+            type="button"
+          >
+            Do Not Sell My Personal Data
+          </button>
+        </li>
       </ul>
     </div>
     <div
@@ -933,6 +955,17 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             Accessibility Policy
           </a>
+        </li>
+        <li>
+          <button
+            className="ot-sdk-show-settings hide-one-trust btn btn-primary"
+            disabled={false}
+            id="ot-sdk-btn"
+            onClick={[Function]}
+            type="button"
+          >
+            Do Not Sell My Personal Data
+          </button>
         </li>
       </ul>
     </div>
