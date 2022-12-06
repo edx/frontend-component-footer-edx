@@ -19,7 +19,7 @@
 }
 
 /* Override the default settings */
-.ot-sdk-show-settings {
+.ccpa-show-settings {
   &:hover {
     color: #004972 !important;
     text-decoration: underline !important;
@@ -34,10 +34,6 @@
   font-weight: 400 !important;
   color: #00688d !important;
   padding: 0 !important;
-
-  &.hide-one-trust {
-    display: none !important;
-  }
 }
 
 $gray-footer: #fcfcfc;
