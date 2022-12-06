@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 
 const CCPA_COOKIE_NAME = 'edx_do_not_sell';
 
-function CCPADialog({ dialogIsOpen, closeCallback, baseURL }) {
+const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
   const [isOpen, open, close] = useToggle(dialogIsOpen);
 
   const getDoNotSellCookie = () => Cookies.get(CCPA_COOKIE_NAME) === 'true';
@@ -29,9 +29,14 @@ function CCPADialog({ dialogIsOpen, closeCallback, baseURL }) {
 
   const setDoNotSellCookie = (value) => {
     const { host } = new URL(baseURL);
+    // Use global domain (`.edx.org`) without the subdomain
+    const hostParts = host.split('.');
+    const domain = hostParts.length > 2
+      ? `.${hostParts.slice(-2).join('.')}`
+      : host;
     const cookieOptions = host.startsWith('localhost')
       ? {}
-      : { domain: host, expires: 365 };
+      : { domain, expires: 365 };
     if (!value) {
       // If cookie is not set to true, then default to sharing the data
       Cookies.remove(CCPA_COOKIE_NAME, cookieOptions);
@@ -128,7 +133,7 @@ function CCPADialog({ dialogIsOpen, closeCallback, baseURL }) {
       </ModalDialog.Footer>
     </ModalDialog>
   );
-}
+};
 
 CCPADialog.propTypes = {
   dialogIsOpen: PropTypes.bool,
