@@ -190,8 +190,7 @@ class Footer extends React.Component {
               },
               {
                 title: intl.formatMessage(messages['footer.doNotSellData']),
-                id: 'ot-sdk-btn',
-                className: `ot-sdk-show-settings ${typeof OneTrust === 'undefined' && 'hide-one-trust'}`,
+                className: 'ccpa-show-settings',
                 onClick: this.CCPADialogOpen,
               },
             ]}
