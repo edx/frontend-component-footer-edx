@@ -185,9 +185,8 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
         </li>
         <li>
           <button
-            className="ot-sdk-show-settings hide-one-trust btn btn-primary"
+            className="ccpa-show-settings btn btn-primary"
             disabled={false}
-            id="ot-sdk-btn"
             onClick={[Function]}
             type="button"
           >
@@ -589,9 +588,8 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
         </li>
         <li>
           <button
-            className="ot-sdk-show-settings hide-one-trust btn btn-primary"
+            className="ccpa-show-settings btn btn-primary"
             disabled={false}
-            id="ot-sdk-btn"
             onClick={[Function]}
             type="button"
           >
@@ -958,9 +956,8 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
         </li>
         <li>
           <button
-            className="ot-sdk-show-settings hide-one-trust btn btn-primary"
+            className="ccpa-show-settings btn btn-primary"
             disabled={false}
-            id="ot-sdk-btn"
             onClick={[Function]}
             type="button"
           >
