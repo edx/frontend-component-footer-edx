@@ -36,7 +36,7 @@
     "@edx/brand": "npm:@edx/brand-edx.org@2.0.8",
     "@edx/browserslist-config": "^1.1.1",
     "@edx/frontend-build": "12.4.0",
-    "@edx/frontend-platform": "^2.0.0 || ^3.0.0",
+    "@edx/frontend-platform": "^3.2.0",
     "@edx/paragon": "20.20.0",
     "@edx/reactifex": "2.1.1",
     "codecov": "3.8.3",
@@ -60,7 +60,7 @@
     "@fortawesome/react-fontawesome": "0.2.0"
   },
   "peerDependencies": {
-    "@edx/frontend-platform": "^2.0.0 || ^3.0.0",
+    "@edx/frontend-platform": "^3.0.0",
     "prop-types": "^15.7.0",
     "react": "^16.9.0 || ^17.0.0",
     "react-dom": "^16.9.0 || ^17.0.0"
