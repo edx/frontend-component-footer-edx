@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@andrewgwardwell 
-edx
-/
-frontend-component-footer-edx
-Public
-Code
-Issues
-1
-Pull requests
-10
-Actions
-Wiki
-Security
-Insights
-frontend-component-footer-edx/.github/workflows/manual-publish.yml
-@adamstankiewicz
-adamstankiewicz chore: auth with npm before publish
-Latest commit edee922 16 hours ago
- History
- 1 contributor
-40 lines (40 sloc)  1.23 KB
-
 name: Manual Publish
 on: [workflow_dispatch]
 jobs:
@@ -68,18 +38,3 @@ jobs:
         NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_NPM_TOKEN }}
       # `npm publish` relies on version specified in package.json file
       run: npm publish --tag old-version
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-frontend-component-footer-edx/manual-publish.yml at v4.6.2 · edx/frontend-component-footer-edx
