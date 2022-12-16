@@ -1,6 +1,6 @@
 {
   "name": "@edx/frontend-component-footer-edx",
-  "version": "1.0.0-semantically-released",
+  "version": "4.7.3",
   "description": "Footer component for edX frontend applications",
   "main": "dist/index.js",
   "publishConfig": {
@@ -36,7 +36,7 @@
     "@edx/brand": "npm:@edx/brand-edx.org@2.0.8",
     "@edx/browserslist-config": "^1.1.1",
     "@edx/frontend-build": "12.4.0",
-    "@edx/frontend-platform": "^2.0.0 || ^3.0.0",
+    "@edx/frontend-platform": "3.2.0",
     "@edx/reactifex": "2.1.1",
     "codecov": "3.8.3",
     "enzyme": "3.11.0",
@@ -52,7 +52,7 @@
     "redux": "4.2.0"
   },
   "dependencies": {
-    "@edx/paragon": "20.20.0",
+    "@edx/paragon": "^20.0.0",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-regular-svg-icons": "5.15.4",
