@@ -1,4 +1,10 @@
 {
+  "prospectus.data.sharing.modal.title": "Do Not Sell My Personal Data",
+  "prospectus.data.sharing.modal.toggle.title": "Share My Data with Third Parties for Personalized Advertising",
+  "prospectus.data.sharing.modal.description": "We share information with business partners to provide personalized\n              online advertising. Under the California Consumer Privacy Act\n              (“CCPA”), some of this data sharing may be broadly considered a “sale”\n              of information. Except for this type of sharing, we do not sell your\n              information. You may opt out of these “sales” under the CCPA. Your\n              selection is saved to this browser, on this device. If you clear your\n              browser cookies, you will need to opt out of “sales” again. To learn\n              more about 2U's use of your data, please see our",
+  "prospectus.data.sharing.modal.privacy-policy.link.title": "Privacy Policy.",
+  "prospectus.data.sharing.modal.cancel.title": "Cancel",
+  "prospectus.data.sharing.modal.confirm.title": "Confirm",
   "footer.trademarks": "{icpMessage}",
   "footer.socialLinks.srText.facebook": "Aimer edX sur Facebook",
   "footer.socialLinks.srText.twitter": "Suivre edX sur Twitter",
@@ -30,5 +36,6 @@
   "footer.mobileApp.google": "Télécharger l'application mobile edX depuis Google Play",
   "footer.logo.altText": "Logo edX",
   "footer.logo.ariaLabel": "Accueil edX",
-  "footer.ariaLabel": "Bas de page"
+  "footer.ariaLabel": "Bas de page",
+  "footer.doNotSellData": "Do Not Sell My Personal Data"
 }
