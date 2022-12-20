@@ -194,7 +194,7 @@ class Footer extends React.Component {
               },
               {
                 title: intl.formatMessage(messages['footer.legalLinks.doNotSellData']),
-                className: 'px-0',
+                className: 'px-0 text-left text-decoration-none',
                 onClick: this.CCPADialogOpen,
                 variant: 'link',
                 size: 'inline',
