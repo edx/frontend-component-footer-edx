@@ -192,7 +192,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
         </li>
         <li>
           <button
-            className="px-0 btn btn-link btn-inline"
+            className="px-0 text-left text-decoration-none btn btn-link btn-inline"
             disabled={false}
             onClick={[Function]}
             type="button"
@@ -602,7 +602,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
         </li>
         <li>
           <button
-            className="px-0 btn btn-link btn-inline"
+            className="px-0 text-left text-decoration-none btn btn-link btn-inline"
             disabled={false}
             onClick={[Function]}
             type="button"
@@ -977,7 +977,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
         </li>
         <li>
           <button
-            className="px-0 btn btn-link btn-inline"
+            className="px-0 text-left text-decoration-none btn btn-link btn-inline"
             disabled={false}
             onClick={[Function]}
             type="button"
