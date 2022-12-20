@@ -189,9 +189,15 @@ class Footer extends React.Component {
                 hidden: intl.locale === 'es',
               },
               {
-                title: intl.formatMessage(messages['footer.doNotSellData']),
-                className: 'ccpa-show-settings',
+                href: `${MARKETING_BASE_URL}${localePrefix}/edx-privacy-policy/cookies`,
+                title: intl.formatMessage(messages['footer.legalLinks.cookiePolicy']),
+              },
+              {
+                title: intl.formatMessage(messages['footer.legalLinks.doNotSellData']),
+                className: 'px-0',
                 onClick: this.CCPADialogOpen,
+                variant: 'link',
+                size: 'inline',
               },
             ]}
           />
