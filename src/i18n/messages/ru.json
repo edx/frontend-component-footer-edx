@@ -26,6 +26,8 @@
   "footer.legalLinks.a11yPolicy": "Accessibility Policy",
   "footer.legalLinks.trademarkPolicy": "Trademark Policy",
   "footer.legalLinks.sitemap": "Sitemap",
+  "footer.legalLinks.doNotSellData": "Do Not Sell My Personal Data",
+  "footer.legalLinks.cookiePolicy": "Cookie Policy",
   "footer.connectLinks.heading": "Connect",
   "footer.connectLinks.blog": "Blog",
   "footer.connectLinks.contact": "Contact Us",
@@ -36,6 +38,5 @@
   "footer.mobileApp.google": "Download the edX mobile app from Google Play",
   "footer.logo.altText": "edX Logo",
   "footer.logo.ariaLabel": "edX Home",
-  "footer.ariaLabel": "Page Footer",
-  "footer.doNotSellData": "Do Not Sell My Personal Data"
+  "footer.ariaLabel": "Page Footer"
 }
