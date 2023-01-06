@@ -197,7 +197,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Do Not Sell My Personal Data
+            Do Not Sell My Personal Information
           </button>
         </li>
       </ul>
@@ -449,7 +449,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       </ul>
       <p>
         © 
-        2022
+        2023
          edX LLC. All rights reserved.
         <br />
         深圳市恒宇博科技有限公司 
@@ -607,7 +607,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
             onClick={[Function]}
             type="button"
           >
-            Do Not Sell My Personal Data
+            Do Not Sell My Personal Information
           </button>
         </li>
       </ul>
@@ -859,7 +859,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       </ul>
       <p>
         © 
-        2022
+        2023
          edX LLC. All rights reserved.
         <br />
         深圳市恒宇博科技有限公司 
@@ -982,7 +982,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
             onClick={[Function]}
             type="button"
           >
-            Do Not Sell My Personal Data
+            Do Not Sell My Personal Information
           </button>
         </li>
       </ul>
@@ -1227,7 +1227,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       </ul>
       <p>
         © 
-        2022
+        2023
          edX LLC. All rights reserved.
         <br />
         深圳市恒宇博科技有限公司 
