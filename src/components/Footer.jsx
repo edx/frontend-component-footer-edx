@@ -198,6 +198,7 @@ class Footer extends React.Component {
                 onClick: this.CCPADialogOpen,
                 variant: 'link',
                 size: 'inline',
+                id: 'footer-dns-link',
               },
             ]}
           />
