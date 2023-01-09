@@ -16,6 +16,7 @@ import GooglePlayStoreButton from './GooglePlayStoreButton';
 import SocialIconLinks from './SocialIconLinks';
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
+import CCPADialog from './CCPADialog';
 
 ensureConfig([
   'LOGO_TRADEMARK_URL',
@@ -39,10 +40,13 @@ class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.externalLinkClickHandler = this.externalLinkClickHandler.bind(this);
+    this.CCPADialogCloseHandler = this.CCPADialogCloseHandler.bind(this);
+    this.CCPADialogOpen = this.CCPADialogOpen.bind(this);
 
     this.state = {
       // Used for constructing the enterprise market link.
       utmSource: 'edx.org',
+      showCCPADialog: false,
     };
   }
 
@@ -71,6 +75,18 @@ class Footer extends React.Component {
       label,
     };
     sendTrackEvent(eventName, properties);
+  }
+
+  CCPADialogCloseHandler() {
+    this.setState({
+      showCCPADialog: false,
+    });
+  }
+
+  CCPADialogOpen() {
+    this.setState({
+      showCCPADialog: true,
+    });
   }
 
   render() {
@@ -172,6 +188,18 @@ class Footer extends React.Component {
                 title: intl.formatMessage(messages['footer.legalLinks.sitemap']),
                 hidden: intl.locale === 'es',
               },
+              {
+                href: `${MARKETING_BASE_URL}${localePrefix}/edx-privacy-policy/cookies`,
+                title: intl.formatMessage(messages['footer.legalLinks.cookiePolicy']),
+              },
+              {
+                title: intl.formatMessage(messages['footer.legalLinks.doNotSellData']),
+                className: 'px-0 text-left text-decoration-none',
+                onClick: this.CCPADialogOpen,
+                variant: 'link',
+                size: 'inline',
+                id: 'footer-dns-link',
+              },
             ]}
           />
           <LinkList
@@ -231,6 +259,11 @@ class Footer extends React.Component {
             </p>
           </div>
         </div>
+        <CCPADialog
+          dialogIsOpen={this.state.showCCPADialog}
+          closeCallback={this.CCPADialogCloseHandler}
+          baseURL={`${MARKETING_BASE_URL}${localePrefix}`}
+        />
       </footer>
     );
   }

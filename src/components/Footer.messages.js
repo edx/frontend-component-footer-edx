@@ -101,6 +101,16 @@ const messages = defineMessages({
     defaultMessage: 'Sitemap',
     description: 'The label for the link to the edX sitemap page.',
   },
+  'footer.legalLinks.doNotSellData': {
+    id: 'footer.legalLinks.doNotSellData',
+    defaultMessage: 'Do Not Sell My Personal Information',
+    description: 'link button that leads to the "Do Not Sell My Personal Information" cookie settings menu.',
+  },
+  'footer.legalLinks.cookiePolicy': {
+    id: 'footer.legalLinks.cookiePolicy',
+    defaultMessage: 'Cookie Policy',
+    description: 'link button that leads to the edX "Cookie Policy" page',
+  },
   'footer.connectLinks.heading': {
     id: 'footer.connectLinks.heading',
     defaultMessage: 'Connect',
