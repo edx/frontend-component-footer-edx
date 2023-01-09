@@ -36,7 +36,6 @@ Array [
       <div
         className="pgn__modal-backdrop"
         onClick={[Function]}
-        onKeyDown={[Function]}
       />
       <div
         aria-label="Manage Consent Preferences"
@@ -83,7 +82,9 @@ Array [
           <h2
             className="pgn__modal-title"
           >
-            Manage Consent Preferences
+            <span>
+              Manage Consent Preferences
+            </span>
           </h2>
         </div>
         <div
@@ -117,19 +118,25 @@ Array [
                       className="pgn__form-label"
                       htmlFor="form-field14"
                     >
-                      Share My Information with Third Parties for Personalized Advertising
+                      <span>
+                        Share My Information with Third Parties for Personalized Advertising
+                      </span>
                     </label>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              We share information with business partners to provide personalized online advertising. Under the California Consumer Privacy Act (“CCPA”), some of this data sharing may be broadly considered a “sale” of information. Except for this type of sharing, we do not sell your information. You may opt out of these “sales” under the CCPA. Your selection is saved to this browser, on this device. If you clear your browser cookies, you will need to opt out of “sales” again. To learn more about 2U's use of your data, please see our
+              <span>
+                We share information with business partners to provide personalized online advertising. Under the California Consumer Privacy Act (“CCPA”), some of this data sharing may be broadly considered a “sale” of information. Except for this type of sharing, we do not sell your information. You may opt out of these “sales” under the CCPA. Your selection is saved to this browser, on this device. If you clear your browser cookies, you will need to opt out of “sales” again. To learn more about 2U's use of your data, please see our
+              </span>
                
               <a
                 href="https://edx.org/edx-privacy-policy"
               >
-                Privacy Policy.
+                <span>
+                  Privacy Policy.
+                </span>
               </a>
             </div>
           </div>
@@ -147,7 +154,9 @@ Array [
               onClick={[Function]}
               type="button"
             >
-              Cancel
+              <span>
+                Cancel
+              </span>
             </button>
             <button
               className="btn btn-primary"
@@ -155,7 +164,9 @@ Array [
               onClick={[Function]}
               type="button"
             >
-              Confirm
+              <span>
+                Confirm
+              </span>
             </button>
           </div>
         </div>
