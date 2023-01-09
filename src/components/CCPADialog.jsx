@@ -59,7 +59,7 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
 
   return (
     <ModalDialog
-      title="Do Not Sell My Personal Data"
+      title="Manage Consent Preferences"
       isOpen={isOpen}
       onClose={close}
       size="xl"
@@ -72,7 +72,7 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
           <FormattedMessage
             id="prospectus.data.sharing.modal.title"
             description="CCPA Data sharing dialog title"
-            defaultMessage="Do Not Sell My Personal Data"
+            defaultMessage="Manage Consent Preferences"
           />
         </ModalDialog.Title>
       </ModalDialog.Header>
@@ -87,7 +87,7 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
             <FormattedMessage
               id="prospectus.data.sharing.modal.toggle.title"
               description="CCPA Data sharing dialog toggle title"
-              defaultMessage="Share My Data with Third Parties for Personalized Advertising"
+              defaultMessage="Share My Information with Third Parties for Personalized Advertising"
             />
           </Form.Switch>
         </Form.Group>

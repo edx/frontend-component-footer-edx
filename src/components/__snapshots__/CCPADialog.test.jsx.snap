@@ -39,7 +39,7 @@ Array [
         onKeyDown={[Function]}
       />
       <div
-        aria-label="Do Not Sell My Personal Data"
+        aria-label="Manage Consent Preferences"
         className="pgn__modal pgn__modal-xl pgn__modal-default ccpa-dialog"
         role="dialog"
       >
@@ -83,7 +83,7 @@ Array [
           <h2
             className="pgn__modal-title"
           >
-            Do Not Sell My Personal Data
+            Manage Consent Preferences
           </h2>
         </div>
         <div
@@ -117,7 +117,7 @@ Array [
                       className="pgn__form-label"
                       htmlFor="form-field14"
                     >
-                      Share My Data with Third Parties for Personalized Advertising
+                      Share My Information with Third Parties for Personalized Advertising
                     </label>
                   </div>
                 </div>
