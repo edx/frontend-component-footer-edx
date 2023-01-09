@@ -12,6 +12,11 @@ import ptbrMessages from './messages/pt_br.json';
 import ruMessages from './messages/ru.json';
 import thMessages from './messages/th.json';
 import ukMessages from './messages/uk.json';
+import ptMessages from './messages/pt.json';
+import itMessages from './messages/it.json';
+import deMessages from './messages/de.json';
+import hiMessages from './messages/hi.json';
+import frCAMessages from './messages/fr_CA.json';
 
 const messages = {
   ar: arMessages,
@@ -27,6 +32,11 @@ const messages = {
   ru: ruMessages,
   th: thMessages,
   uk: ukMessages,
+  pt: ptMessages,
+  it: itMessages,
+  de: deMessages,
+  hi: hiMessages,
+  'fr-ca': frCAMessages,
 };
 
 export default messages;

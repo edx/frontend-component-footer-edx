@@ -36,9 +36,10 @@ Array [
       <div
         className="pgn__modal-backdrop"
         onClick={[Function]}
+        onKeyDown={[Function]}
       />
       <div
-        aria-label="Do Not Sell My Personal Data"
+        aria-label="Manage Consent Preferences"
         className="pgn__modal pgn__modal-xl pgn__modal-default ccpa-dialog"
         role="dialog"
       >
@@ -82,9 +83,7 @@ Array [
           <h2
             className="pgn__modal-title"
           >
-            <span>
-              Do Not Sell My Personal Data
-            </span>
+            Manage Consent Preferences
           </h2>
         </div>
         <div
@@ -118,25 +117,19 @@ Array [
                       className="pgn__form-label"
                       htmlFor="form-field14"
                     >
-                      <span>
-                        Share My Data with Third Parties for Personalized Advertising
-                      </span>
+                      Share My Information with Third Parties for Personalized Advertising
                     </label>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <span>
-                We share information with business partners to provide personalized online advertising. Under the California Consumer Privacy Act (“CCPA”), some of this data sharing may be broadly considered a “sale” of information. Except for this type of sharing, we do not sell your information. You may opt out of these “sales” under the CCPA. Your selection is saved to this browser, on this device. If you clear your browser cookies, you will need to opt out of “sales” again. To learn more about 2U's use of your data, please see our
-              </span>
+              We share information with business partners to provide personalized online advertising. Under the California Consumer Privacy Act (“CCPA”), some of this data sharing may be broadly considered a “sale” of information. Except for this type of sharing, we do not sell your information. You may opt out of these “sales” under the CCPA. Your selection is saved to this browser, on this device. If you clear your browser cookies, you will need to opt out of “sales” again. To learn more about 2U's use of your data, please see our
                
               <a
                 href="https://edx.org/edx-privacy-policy"
               >
-                <span>
-                  Privacy Policy.
-                </span>
+                Privacy Policy.
               </a>
             </div>
           </div>
@@ -154,9 +147,7 @@ Array [
               onClick={[Function]}
               type="button"
             >
-              <span>
-                Cancel
-              </span>
+              Cancel
             </button>
             <button
               className="btn btn-primary"
@@ -164,9 +155,7 @@ Array [
               onClick={[Function]}
               type="button"
             >
-              <span>
-                Confirm
-              </span>
+              Confirm
             </button>
           </div>
         </div>

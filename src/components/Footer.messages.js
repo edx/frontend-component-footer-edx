@@ -101,6 +101,16 @@ const messages = defineMessages({
     defaultMessage: 'Sitemap',
     description: 'The label for the link to the edX sitemap page.',
   },
+  'footer.legalLinks.doNotSellData': {
+    id: 'footer.legalLinks.doNotSellData',
+    defaultMessage: 'Do Not Sell My Personal Information',
+    description: 'link button that leads to the "Do Not Sell My Personal Information" cookie settings menu.',
+  },
+  'footer.legalLinks.cookiePolicy': {
+    id: 'footer.legalLinks.cookiePolicy',
+    defaultMessage: 'Cookie Policy',
+    description: 'link button that leads to the edX "Cookie Policy" page',
+  },
   'footer.connectLinks.heading': {
     id: 'footer.connectLinks.heading',
     defaultMessage: 'Connect',
@@ -120,6 +130,11 @@ const messages = defineMessages({
     id: 'footer.connectLinks.help',
     defaultMessage: 'Help Center',
     description: 'The label for the link to the edX help center.',
+  },
+  'footer.connectLinks.security': {
+    id: 'footer.connectLinks.security',
+    defaultMessage: 'Security',
+    description: 'The label for the link to the security disclosures page.',
   },
   'footer.connectLinks.mediaKit': {
     id: 'footer.connectLinks.mediaKit',
@@ -150,11 +165,6 @@ const messages = defineMessages({
     id: 'footer.ariaLabel',
     defaultMessage: 'Page Footer',
     description: 'aria-label for the footer component',
-  },
-  'footer.doNotSellData': {
-    id: 'footer.doNotSellData',
-    defaultMessage: 'Do Not Sell My Personal Data',
-    description: 'link button that leads to the cookie settings menu',
   },
 });
 

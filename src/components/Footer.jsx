@@ -189,9 +189,16 @@ class Footer extends React.Component {
                 hidden: intl.locale === 'es',
               },
               {
-                title: intl.formatMessage(messages['footer.doNotSellData']),
-                className: 'ccpa-show-settings',
+                href: `${MARKETING_BASE_URL}${localePrefix}/edx-privacy-policy/cookies`,
+                title: intl.formatMessage(messages['footer.legalLinks.cookiePolicy']),
+              },
+              {
+                title: intl.formatMessage(messages['footer.legalLinks.doNotSellData']),
+                className: 'px-0 text-left text-decoration-none',
                 onClick: this.CCPADialogOpen,
+                variant: 'link',
+                size: 'inline',
+                id: 'footer-dns-link',
               },
             ]}
           />
@@ -210,6 +217,10 @@ class Footer extends React.Component {
               {
                 href: 'https://support.edx.org',
                 title: intl.formatMessage(messages['footer.connectLinks.help']),
+              },
+              {
+                href: `${MARKETING_BASE_URL}${localePrefix}/policy/security`,
+                title: intl.formatMessage(messages['footer.connectLinks.security']),
               },
               {
                 href: `${MARKETING_BASE_URL}${localePrefix}/media-kit`,

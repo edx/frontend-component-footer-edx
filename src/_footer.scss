@@ -18,26 +18,6 @@
   display: grid;
 }
 
-/* Override the default settings */
-.ccpa-show-settings {
-  &:hover {
-    color: #004972 !important;
-    text-decoration: underline !important;
-  }
-  &:focus::before {
-    border: none !important;
-  }
-  background-color: transparent !important;
-  border: none !important;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif !important;
-  font-size: 1.125rem !important;
-  font-weight: 400 !important;
-  color: #00688d !important;
-  padding: 0 !important;
-  text-align: left !important;
-  justify-content: flex-start !important;
-}
-
 $gray-footer: #fcfcfc;
 $border-1: 1px solid $gray-200;
 
@@ -182,10 +162,4 @@ $border-1: 1px solid $gray-200;
       max-width: 372px;
     }
   }
-}
-
-.ccpa-dialog .pgn__form-switch-input {
-  flex-shrink: 0;
-  margin-right: 0;
-  align-self: center;
 }
