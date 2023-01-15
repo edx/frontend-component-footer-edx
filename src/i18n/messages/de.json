@@ -1,6 +1,6 @@
 {
-  "prospectus.data.sharing.modal.title": "Do Not Sell My Personal Data",
-  "prospectus.data.sharing.modal.toggle.title": "Share My Data with Third Parties for Personalized Advertising",
+  "prospectus.data.sharing.modal.title": "Manage Consent Preferences",
+  "prospectus.data.sharing.modal.toggle.title": "Share My Information with Third Parties for Personalized Advertising",
   "prospectus.data.sharing.modal.description": "We share information with business partners to provide personalized\n              online advertising. Under the California Consumer Privacy Act\n              (“CCPA”), some of this data sharing may be broadly considered a “sale”\n              of information. Except for this type of sharing, we do not sell your\n              information. You may opt out of these “sales” under the CCPA. Your\n              selection is saved to this browser, on this device. If you clear your\n              browser cookies, you will need to opt out of “sales” again. To learn\n              more about 2U's use of your data, please see our",
   "prospectus.data.sharing.modal.privacy-policy.link.title": "Privacy Policy.",
   "prospectus.data.sharing.modal.cancel.title": "Cancel",
@@ -26,7 +26,7 @@
   "footer.legalLinks.a11yPolicy": "Accessibility Policy",
   "footer.legalLinks.trademarkPolicy": "Trademark Policy",
   "footer.legalLinks.sitemap": "Sitemap",
-  "footer.legalLinks.doNotSellData": "Do Not Sell My Personal Data",
+  "footer.legalLinks.doNotSellData": "Do Not Sell My Personal Information",
   "footer.legalLinks.cookiePolicy": "Cookie Policy",
   "footer.connectLinks.heading": "Connect",
   "footer.connectLinks.blog": "Blog",
