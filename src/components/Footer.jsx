@@ -59,9 +59,6 @@ class Footer extends React.Component {
     });
   }
 
-  // Added specific check for edX mobile app
-  isMobile = () => navigator.userAgent.match('org.edx.mobile');
-
   getLocalePrefix(locale) {
     const twoLetterPrefix = locale.substring(0, 2).toLowerCase();
     if (twoLetterPrefix === 'en') {
@@ -69,6 +66,9 @@ class Footer extends React.Component {
     }
     return `/${twoLetterPrefix}`;
   }
+
+  // Added specific check for edX mobile app
+  isMobile = () => navigator.userAgent.match('org.edx.mobile');
 
   externalLinkClickHandler(event) {
     const label = event.currentTarget.getAttribute('href');
