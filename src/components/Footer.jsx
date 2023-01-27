@@ -59,6 +59,9 @@ class Footer extends React.Component {
     });
   }
 
+  // Added specific check for edX mobile app
+  isMobile = () => navigator.userAgent.match('org.edx.mobile');
+
   getLocalePrefix(locale) {
     const twoLetterPrefix = locale.substring(0, 2).toLowerCase();
     if (twoLetterPrefix === 'en') {
@@ -233,6 +236,7 @@ class Footer extends React.Component {
             <ul className="d-flex flex-row justify-content-between list-unstyled max-width-222 p-0 mb-4">
               <SocialIconLinks onClick={this.externalLinkClickHandler} />
             </ul>
+            {!this.isMobile() && (
             <ul className="d-flex flex-row justify-content-between list-unstyled max-width-264 p-0 mb-5">
               <li>
                 <GooglePlayStoreButton onClick={this.externalLinkClickHandler} />
@@ -241,6 +245,7 @@ class Footer extends React.Component {
                 <AppleAppStoreButton onClick={this.externalLinkClickHandler} />
               </li>
             </ul>
+            )}
             <p>
               © {new Date().getFullYear()} edX LLC. All rights reserved.
               <br />
