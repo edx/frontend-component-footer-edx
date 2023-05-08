@@ -178,6 +178,10 @@ class Footer extends React.Component {
                 title: intl.formatMessage(messages['footer.legalLinks.privacyPolicy']),
               },
               {
+                href: `${MARKETING_BASE_URL}${localePrefix}/edx-privacy-policy#california-notice`,
+                title: intl.formatMessage(messages['footer.legalLinks.californiaPrivacyPolicy']),
+              },
+              {
                 href: `${MARKETING_BASE_URL}${localePrefix}/accessibility`,
                 title: intl.formatMessage(messages['footer.legalLinks.a11yPolicy']),
               },

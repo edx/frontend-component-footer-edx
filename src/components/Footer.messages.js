@@ -86,6 +86,11 @@ const messages = defineMessages({
     defaultMessage: 'Privacy Policy',
     description: 'The label for the link to the edX privacy policy page.',
   },
+  'footer.legalLinks.californiaPrivacyPolicy': {
+    id: 'footer.legalLinks.californiaPrivacyPolicy',
+    defaultMessage: 'California Privacy Policy',
+    description: 'The label for the link to the edX california privacy policy section.',
+  },
   'footer.legalLinks.a11yPolicy': {
     id: 'footer.legalLinks.a11yPolicy',
     defaultMessage: 'Accessibility Policy',
