@@ -164,6 +164,13 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
         </li>
         <li>
           <a
+            href="https://edx.org/edx-privacy-policy#california-notice"
+          >
+            California Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a
             href="https://edx.org/accessibility"
           >
             Accessibility Policy
@@ -575,6 +582,13 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
         </li>
         <li>
           <a
+            href="https://edx.org/edx-privacy-policy#california-notice"
+          >
+            California Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a
             href="https://edx.org/accessibility"
           >
             Accessibility Policy
@@ -961,6 +975,13 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
             href="https://edx.org/es/edx-privacy-policy"
           >
             Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://edx.org/es/edx-privacy-policy#california-notice"
+          >
+            California Privacy Policy
           </a>
         </li>
         <li>
