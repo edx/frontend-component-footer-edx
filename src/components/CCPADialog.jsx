@@ -10,29 +10,29 @@ const CCPA_COOKIE_NAME = 'edx_do_not_sell';
 const isBrowser = typeof window !== 'undefined';
 const isGpcEnabled = isBrowser ? navigator.globalPrivacyControl : false;
 
+const setDoNotSellCookie = (value, baseURL) => {
+  const { host } = new URL(baseURL);
+  // Use global domain (`.edx.org`) without the subdomain
+  const hostParts = host.split('.');
+  const domain = hostParts.length > 2
+    ? `.${hostParts.slice(-2).join('.')}`
+    : host;
+  const cookieOptions = host.startsWith('localhost')
+    ? {}
+    : { domain, expires: 365 };
+  if (!value) {
+    // If cookie is not set to true, then default to sharing the data
+    Cookies.remove(CCPA_COOKIE_NAME, cookieOptions);
+    return;
+  }
+  Cookies.set(CCPA_COOKIE_NAME, value, cookieOptions);
+};
+
 const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
   const [isOpen, open, close] = useToggle(dialogIsOpen);
 
   const getDoNotSellCookie = () => Cookies.get(CCPA_COOKIE_NAME) === 'true';
   const [personalizationChecked, setPersonalizationChecked] = useState(() => !getDoNotSellCookie());
-
-  const setDoNotSellCookie = useCallback((value) => {
-    const { host } = new URL(baseURL);
-    // Use global domain (`.edx.org`) without the subdomain
-    const hostParts = host.split('.');
-    const domain = hostParts.length > 2
-      ? `.${hostParts.slice(-2).join('.')}`
-      : host;
-    const cookieOptions = host.startsWith('localhost')
-      ? {}
-      : { domain, expires: 365 };
-    if (!value) {
-      // If cookie is not set to true, then default to sharing the data
-      Cookies.remove(CCPA_COOKIE_NAME, cookieOptions);
-      return;
-    }
-    Cookies.set(CCPA_COOKIE_NAME, value, cookieOptions);
-  }, []);
 
   const handleSwitchChange = (e) => {
     setPersonalizationChecked(e.target.checked);
@@ -40,7 +40,7 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
 
   const handleConfirmation = () => {
     if (typeof window === 'object' && getDoNotSellCookie() === personalizationChecked) {
-      setDoNotSellCookie(!personalizationChecked);
+      setDoNotSellCookie(!personalizationChecked, baseURL);
       window.location.reload();
     }
     close();
@@ -48,7 +48,7 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
 
   useEffect(() => {
     if (dialogIsOpen) {
-      setDoNotSellCookie(isGpcEnabled);
+      setDoNotSellCookie(isGpcEnabled, baseURL);
       setPersonalizationChecked(!getDoNotSellCookie());
       open();
     }
