@@ -52,7 +52,7 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
       setPersonalizationChecked(!getDoNotSellCookie());
       open();
     }
-  }, [dialogIsOpen, open]);
+  }, [dialogIsOpen, open, setDoNotSellCookie]);
 
   useEffect(() => {
     if (!isOpen) {
