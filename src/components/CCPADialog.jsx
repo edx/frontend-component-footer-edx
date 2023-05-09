@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from '@edx/frontend-platform/i18n';
 import {
@@ -16,7 +16,7 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
   const getDoNotSellCookie = () => Cookies.get(CCPA_COOKIE_NAME) === 'true';
   const [personalizationChecked, setPersonalizationChecked] = useState(() => !getDoNotSellCookie());
 
-  const setDoNotSellCookie = (value) => {
+  const setDoNotSellCookie = useCallback((value) => {
     const { host } = new URL(baseURL);
     // Use global domain (`.edx.org`) without the subdomain
     const hostParts = host.split('.');
@@ -32,7 +32,7 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
       return;
     }
     Cookies.set(CCPA_COOKIE_NAME, value, cookieOptions);
-  };
+  }, []);
 
   const handleSwitchChange = (e) => {
     setPersonalizationChecked(e.target.checked);
@@ -52,7 +52,7 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
       setPersonalizationChecked(!getDoNotSellCookie());
       open();
     }
-  }, [dialogIsOpen, open, setDoNotSellCookie]);
+  }, [dialogIsOpen, open]);
 
   useEffect(() => {
     if (!isOpen) {
