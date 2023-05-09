@@ -7,28 +7,14 @@ import {
 import Cookies from 'js-cookie';
 
 const CCPA_COOKIE_NAME = 'edx_do_not_sell';
+const isBrowser = typeof window !== 'undefined';
+const isGpcEnabled = isBrowser ? navigator.globalPrivacyControl : false;
 
 const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
   const [isOpen, open, close] = useToggle(dialogIsOpen);
-  const isBrowser = typeof window !== 'undefined';
-  const isGpcEnabled = isBrowser ? navigator.globalPrivacyControl : false;
 
   const getDoNotSellCookie = () => Cookies.get(CCPA_COOKIE_NAME) === 'true';
   const [personalizationChecked, setPersonalizationChecked] = useState(() => !getDoNotSellCookie());
-
-  useEffect(() => {
-    if (dialogIsOpen) {
-      setDoNotSellCookie(isGpcEnabled);
-      setPersonalizationChecked(!getDoNotSellCookie());
-      open();
-    }
-  }, [dialogIsOpen, open]);
-
-  useEffect(() => {
-    if (!isOpen) {
-      closeCallback();
-    }
-  }, [closeCallback, isOpen]);
 
   const setDoNotSellCookie = (value) => {
     const { host } = new URL(baseURL);
@@ -59,6 +45,20 @@ const CCPADialog = ({ dialogIsOpen, closeCallback, baseURL }) => {
     }
     close();
   };
+
+  useEffect(() => {
+    if (dialogIsOpen) {
+      setDoNotSellCookie(isGpcEnabled);
+      setPersonalizationChecked(!getDoNotSellCookie());
+      open();
+    }
+  }, [dialogIsOpen, open]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      closeCallback();
+    }
+  }, [closeCallback, isOpen]);
 
   return (
     <ModalDialog
