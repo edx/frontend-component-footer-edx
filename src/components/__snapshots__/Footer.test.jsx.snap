@@ -198,7 +198,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Do Not Sell My Personal Information
+            Your Privacy Choices
           </button>
         </li>
       </ul>
@@ -609,7 +609,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
             onClick={[Function]}
             type="button"
           >
-            Do Not Sell My Personal Information
+            Your Privacy Choices
           </button>
         </li>
       </ul>
@@ -985,7 +985,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
             onClick={[Function]}
             type="button"
           >
-            Do Not Sell My Personal Information
+            Your Privacy Choices
           </button>
         </li>
       </ul>
