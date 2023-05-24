@@ -10,13 +10,13 @@ import { FormattedMessage, injectIntl, intlShape } from '@edx/frontend-platform/
 import { ensureConfig } from '@edx/frontend-platform/config';
 import { AppContext } from '@edx/frontend-platform/react';
 
+import Cookies from 'js-cookie';
 import LinkList from './LinkList';
 import AppleAppStoreButton from './AppleAppStoreButton';
 import GooglePlayStoreButton from './GooglePlayStoreButton';
 import SocialIconLinks from './SocialIconLinks';
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
-import Cookies from 'js-cookie';
 
 ensureConfig([
   'LOGO_TRADEMARK_URL',
@@ -75,8 +75,9 @@ class Footer extends React.Component {
     };
     sendTrackEvent(eventName, properties);
   }
-  
-  setDoNotSellCookie (value) {
+
+  toggleConsentModal() {
+    window.OneTrust?.ToggleInfoDisplay();
     const { host } = new URL(`${MARKETING_BASE_URL}`);
     // Use global domain (`.edx.org`) without the subdomain
     const hostParts = host.split('.');
@@ -86,12 +87,8 @@ class Footer extends React.Component {
     const cookieOptions = host.startsWith('localhost')
       ? {}
       : { domain, expires: 365 };
-    Cookies.set(CCPA_COOKIE_NAME, value, cookieOptions);
-  };
-
-   toggleConsentModal () {
-    window.OneTrust?.ToggleInfoDisplay();
-  };
+    Cookies.set(CCPA_COOKIE_NAME, true, cookieOptions);
+  }
 
   render() {
     const {
@@ -199,7 +196,7 @@ class Footer extends React.Component {
               {
                 title: intl.formatMessage(messages['footer.legalLinks.doNotSellData']),
                 className: 'px-0 text-left text-decoration-none',
-                onClick: () => {this.setDoNotSellCookie(true), this.toggleConsentModal()},
+                onClick: this.toggleConsentModal,
                 variant: 'link',
                 size: 'inline',
                 id: 'footer-dns-link',
