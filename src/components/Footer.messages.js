@@ -103,7 +103,7 @@ const messages = defineMessages({
   },
   'footer.legalLinks.doNotSellData': {
     id: 'footer.legalLinks.doNotSellData',
-    defaultMessage: 'Do Not Sell My Personal Information',
+    defaultMessage: 'Your Privacy Choices',
     description: 'link button that leads to the "Do Not Sell My Personal Information" cookie settings menu.',
   },
   'footer.legalLinks.cookiePolicy': {
