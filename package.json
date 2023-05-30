@@ -1,6 +1,6 @@
 {
   "name": "@edx/frontend-component-footer-edx",
-  "version": "3.5.3",
+  "version": "3.5.4",
   "description": "Footer component for edX frontend applications",
   "main": "dist/index.js",
   "publishConfig": {
