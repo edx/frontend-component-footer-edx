@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CCPADialog Snapshots Dialog is closed 1`] = `null`;
+
+exports[`CCPADialog Snapshots Dialog is open 1`] = `
+Array [
+  <div
+    data-focus-guard={true}
+    style={
+      Object {
+        "height": "0px",
+        "left": "1px",
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "fixed",
+        "top": "1px",
+        "width": "1px",
+      }
+    }
+    tabIndex={0}
+  />,
+  <div
+    className="pgn__modal-layer"
+    data-focus-lock-disabled={false}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onScrollCapture={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onWheelCapture={[Function]}
+  >
+    <div
+      className="pgn__modal-content-container"
+    >
+      <div
+        className="pgn__modal-backdrop"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      />
+      <div
+        aria-label="Manage Consent Preferences"
+        className="pgn__modal pgn__modal-xl pgn__modal-default ccpa-dialog"
+        role="dialog"
+      >
+        <div
+          className="pgn__modal-close-container"
+        >
+          <button
+            aria-label="Close"
+            className="btn-icon btn-icon-primary btn-icon-md pgn__modal-close-button"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="btn-icon__icon-container"
+            >
+              <span
+                className="pgn__icon btn-icon__icon"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="none"
+                  focusable={false}
+                  height={24}
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width={24}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </div>
+        <div
+          className="pgn__modal-header"
+        >
+          <h2
+            className="pgn__modal-title"
+          >
+            Manage Consent Preferences
+          </h2>
+        </div>
+        <div
+          className="pgn__modal-body pgn__modal-body-scroll-top pgn__modal-body-scroll-bottom"
+        >
+          <div />
+          <div
+            className="pgn__modal-body-content"
+          >
+            <div
+              className="pgn__form-group"
+            >
+              <div
+                className="d-inline-flex flex-column"
+              >
+                <div
+                  className="pgn__form-checkbox pgn__form-switch h4 pgn__form-control-label-left"
+                  id="form-field13"
+                  role="group"
+                >
+                  <input
+                    checked={false}
+                    className="pgn__form-switch-input"
+                    id="form-field14"
+                    onChange={[Function]}
+                    role="switch"
+                    type="checkbox"
+                  />
+                  <div>
+                    <label
+                      className="pgn__form-label"
+                      htmlFor="form-field14"
+                    >
+                      Share My Information with Third Parties for Personalized Advertising
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              We share information with business partners to provide personalized online advertising. Under the California Consumer Privacy Act (“CCPA”), some of this data sharing may be broadly considered a “sale” of information. Except for this type of sharing, we do not sell your information. You may opt out of these “sales” under the CCPA. Your selection is saved to this browser, on this device. If you clear your browser cookies, you will need to opt out of “sales” again. To learn more about 2U's use of your data, please see our
+               
+              <a
+                href="https://edx.org/edx-privacy-policy"
+              >
+                Privacy Policy.
+              </a>
+            </div>
+          </div>
+          <div />
+        </div>
+        <div
+          className="pgn__modal-footer"
+        >
+          <div
+            className="pgn__action-row"
+          >
+            <button
+              className="pgn__modal-close-button btn btn-tertiary"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              className="btn btn-primary"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    data-focus-guard={true}
+    style={
+      Object {
+        "height": "0px",
+        "left": "1px",
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "fixed",
+        "top": "1px",
+        "width": "1px",
+      }
+    }
+    tabIndex={0}
+  />,
+]
+`;
