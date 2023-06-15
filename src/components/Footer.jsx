@@ -83,13 +83,7 @@ class Footer extends React.Component {
     window.OneTrust?.ToggleInfoDisplay();
     const { host } = new URL(`${MARKETING_BASE_URL}`);
     // Use global domain (`.edx.org`) without the subdomain
-    const hostParts = host.split('.');
-    const domain = hostParts.length > 2
-      ? `.${hostParts.slice(-2).join('.')}`
-      : host;
-    const cookieOptions = host.startsWith('localhost')
-      ? {}
-      : { domain, expires: 365 };
+    const cookieOptions = { host, expires: 365 };
     Cookies.set(CCPA_COOKIE_NAME, true, cookieOptions);
   }
 
