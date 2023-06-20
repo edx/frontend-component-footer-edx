@@ -77,7 +77,9 @@ class Footer extends React.Component {
   }
 
   toggleConsentModal() {
-    window.OneTrust?.ToggleInfoDisplay();
+    if (window.OneTrust) {
+      window.OneTrust.ToggleInfoDisplay();
+    }
     const { host } = new URL(`${MARKETING_BASE_URL}`);
     // Use global domain (`.edx.org`) without the subdomain
     const cookieOptions = { host, expires: 365 };
