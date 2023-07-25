@@ -204,7 +204,7 @@ class Footer extends React.Component {
             title={intl.formatMessage(messages['footer.connectLinks.heading'])}
             links={[
               {
-                href: 'https://blog.edx.org',
+                href: 'https://www.edx.org/resources',
                 title: intl.formatMessage(messages['footer.connectLinks.blog']),
               },
               {
