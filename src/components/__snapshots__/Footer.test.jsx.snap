@@ -214,9 +214,9 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       >
         <li>
           <a
-            href="https://blog.edx.org"
+            href="https://www.edx.org/resources"
           >
-            Blog
+            Idea Hub
           </a>
         </li>
         <li>
@@ -625,9 +625,9 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       >
         <li>
           <a
-            href="https://blog.edx.org"
+            href="https://www.edx.org/resources"
           >
-            Blog
+            Idea Hub
           </a>
         </li>
         <li>
@@ -1001,9 +1001,9 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       >
         <li>
           <a
-            href="https://blog.edx.org"
+            href="https://www.edx.org/resources"
           >
-            Blog
+            Idea Hub
           </a>
         </li>
         <li>
