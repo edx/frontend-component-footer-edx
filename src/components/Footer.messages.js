@@ -118,8 +118,8 @@ const messages = defineMessages({
   },
   'footer.connectLinks.blog': {
     id: 'footer.connectLinks.blog',
-    defaultMessage: 'Blog',
-    description: 'The label for the link to the edX blog.',
+    defaultMessage: 'Idea Hub',
+    description: 'The label for the link to edX Idea Hub page.',
   },
   'footer.connectLinks.contact': {
     id: 'footer.connectLinks.contact',
