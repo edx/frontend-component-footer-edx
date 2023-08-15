@@ -39,11 +39,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-language fa-2x text-primary"
-=======
-              className="svg-inline--fa fa-language fa-w-20 fa-2x text-primary"
->>>>>>> 506d817 (fix: update snapshots)
               data-icon="language"
               data-prefix="fas"
               focusable="false"
@@ -269,13 +265,8 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-square-facebook fa-2x social-icon"
               data-icon="square-facebook"
-=======
-              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x social-icon"
-              data-icon="facebook-square"
->>>>>>> 506d817 (fix: update snapshots)
               data-prefix="fab"
               focusable="false"
               role="img"
@@ -306,13 +297,8 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-square-twitter fa-2x social-icon"
               data-icon="square-twitter"
-=======
-              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x social-icon"
-              data-icon="twitter-square"
->>>>>>> 506d817 (fix: update snapshots)
               data-prefix="fab"
               focusable="false"
               role="img"
@@ -343,11 +329,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-linkedin fa-2x social-icon"
-=======
-              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x social-icon"
->>>>>>> 506d817 (fix: update snapshots)
               data-icon="linkedin"
               data-prefix="fab"
               focusable="false"
@@ -379,11 +361,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-instagram fa-2x social-icon"
-=======
-              className="svg-inline--fa fa-instagram fa-w-14 fa-2x social-icon"
->>>>>>> 506d817 (fix: update snapshots)
               data-icon="instagram"
               data-prefix="fab"
               focusable="false"
@@ -415,13 +393,8 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-square-reddit fa-2x social-icon"
               data-icon="square-reddit"
-=======
-              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x social-icon"
-              data-icon="reddit-square"
->>>>>>> 506d817 (fix: update snapshots)
               data-prefix="fab"
               focusable="false"
               role="img"
@@ -703,13 +676,8 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-square-facebook fa-2x social-icon"
               data-icon="square-facebook"
-=======
-              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x social-icon"
-              data-icon="facebook-square"
->>>>>>> 506d817 (fix: update snapshots)
               data-prefix="fab"
               focusable="false"
               role="img"
@@ -740,13 +708,8 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-square-twitter fa-2x social-icon"
               data-icon="square-twitter"
-=======
-              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x social-icon"
-              data-icon="twitter-square"
->>>>>>> 506d817 (fix: update snapshots)
               data-prefix="fab"
               focusable="false"
               role="img"
@@ -777,11 +740,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-linkedin fa-2x social-icon"
-=======
-              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x social-icon"
->>>>>>> 506d817 (fix: update snapshots)
               data-icon="linkedin"
               data-prefix="fab"
               focusable="false"
@@ -813,11 +772,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-instagram fa-2x social-icon"
-=======
-              className="svg-inline--fa fa-instagram fa-w-14 fa-2x social-icon"
->>>>>>> 506d817 (fix: update snapshots)
               data-icon="instagram"
               data-prefix="fab"
               focusable="false"
@@ -849,13 +804,8 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-square-reddit fa-2x social-icon"
               data-icon="square-reddit"
-=======
-              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x social-icon"
-              data-icon="reddit-square"
->>>>>>> 506d817 (fix: update snapshots)
               data-prefix="fab"
               focusable="false"
               role="img"
@@ -1095,13 +1045,8 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-square-facebook fa-2x social-icon"
               data-icon="square-facebook"
-=======
-              className="svg-inline--fa fa-facebook-square fa-w-14 fa-2x social-icon"
-              data-icon="facebook-square"
->>>>>>> 506d817 (fix: update snapshots)
               data-prefix="fab"
               focusable="false"
               role="img"
@@ -1132,13 +1077,8 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-square-twitter fa-2x social-icon"
               data-icon="square-twitter"
-=======
-              className="svg-inline--fa fa-twitter-square fa-w-14 fa-2x social-icon"
-              data-icon="twitter-square"
->>>>>>> 506d817 (fix: update snapshots)
               data-prefix="fab"
               focusable="false"
               role="img"
@@ -1169,11 +1109,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-linkedin fa-2x social-icon"
-=======
-              className="svg-inline--fa fa-linkedin fa-w-14 fa-2x social-icon"
->>>>>>> 506d817 (fix: update snapshots)
               data-icon="linkedin"
               data-prefix="fab"
               focusable="false"
@@ -1205,11 +1141,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-instagram fa-2x social-icon"
-=======
-              className="svg-inline--fa fa-instagram fa-w-14 fa-2x social-icon"
->>>>>>> 506d817 (fix: update snapshots)
               data-icon="instagram"
               data-prefix="fab"
               focusable="false"
@@ -1241,13 +1173,8 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
           >
             <svg
               aria-hidden="true"
-<<<<<<< HEAD
               className="svg-inline--fa fa-square-reddit fa-2x social-icon"
               data-icon="square-reddit"
-=======
-              className="svg-inline--fa fa-reddit-square fa-w-14 fa-2x social-icon"
-              data-icon="reddit-square"
->>>>>>> 506d817 (fix: update snapshots)
               data-prefix="fab"
               focusable="false"
               role="img"
