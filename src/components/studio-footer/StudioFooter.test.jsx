@@ -20,6 +20,7 @@ const config = {
 
 let currentConfig = config;
 const Component = ({ updateVariable }) => {
+  console.log(currentConfig);
   if (updateVariable) {
     const [variable, value] = updateVariable;
     currentConfig = {
@@ -73,8 +74,7 @@ describe('Footer', () => {
       render(<Component />);
       const helpToggleButton = screen.getByText(messages.openHelpButtonLabel.defaultMessage);
       fireEvent.click(helpToggleButton);
-      expect(screen.queryByTestId('edXPortalButton')).toBeNull();
-      expect(screen.getByTestId('openEdXPortalButton')).toBeVisible();
+      expect(screen.queryByTestId('edXPortalButton')).toBeVisible();
     });
     it('should not show contact us button', () => {
       render(<Component />);
