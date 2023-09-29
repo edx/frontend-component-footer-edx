@@ -37,8 +37,9 @@
     "@edx/browserslist-config": "^1.1.1",
     "@edx/frontend-build": "12.9.10",
     "@edx/frontend-platform": "5.4.0",
-    "@edx/paragon": "21.2.0",
     "@edx/reactifex": "2.2.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.1",
     "@wojtekmaj/enzyme-adapter-react-17": "0.8.0",
     "enzyme": "3.11.0",
     "husky": "8.0.3",
@@ -52,16 +53,17 @@
     "redux": "4.2.1"
   },
   "dependencies": {
+    "@edx/paragon": "^21.3.1",
     "@fortawesome/fontawesome-svg-core": "6.4.0",
     "@fortawesome/free-brands-svg-icons": "6.4.0",
     "@fortawesome/free-regular-svg-icons": "6.4.0",
     "@fortawesome/free-solid-svg-icons": "6.4.0",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "js-cookie": "^3.0.1"
+    "js-cookie": "^3.0.1",
+    "lodash": "^4.17.21"
   },
   "peerDependencies": {
     "@edx/frontend-platform": "^4.0.0 || ^5.0.0",
-    "@edx/paragon": "^20.0.0 || ^21.0.0",
     "prop-types": "^15.7.0",
     "react": "^16.9.0 || ^17.0.0",
     "react-dom": "^16.9.0 || ^17.0.0"
