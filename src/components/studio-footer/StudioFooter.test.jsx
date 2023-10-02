@@ -18,16 +18,8 @@ const config = {
   SHOW_ACCESSIBILITY_PAGE: process.env.SHOW_ACCESSIBILITY_PAGE,
 };
 
-let currentConfig = config;
-const Component = ({ updateVariable }) => {
-  console.log(currentConfig);
-  if (updateVariable) {
-    const [variable, value] = updateVariable;
-    currentConfig = {
-      ...config,
-      [variable]: value,
-    };
-  }
+let currentConfig;
+const Component = () => {
   const contextValue = useMemo(() => ({
     authenticatedUser: null,
     config: currentConfig,
@@ -42,9 +34,11 @@ const Component = ({ updateVariable }) => {
   );
 };
 
-jest.unmock('@edx/paragon');
-
 describe('Footer', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    currentConfig = config;
+  });
   describe('help section default view', () => {
     it('help button should read Looking for help with Studio?', () => {
       render(<Component />);
@@ -83,7 +77,8 @@ describe('Footer', () => {
       expect(screen.queryByTestId('contactUsButton')).toBeNull();
     });
     it('should show contact us button', () => {
-      render(<Component updateVariable={['SUPPORT_EMAIL', 'support@email.com']} />);
+      currentConfig = { ...config, SUPPORT_EMAIL: 'support@email.com' };
+      render(<Component />);
       const helpToggleButton = screen.getByText(messages.openHelpButtonLabel.defaultMessage);
       fireEvent.click(helpToggleButton);
       expect(screen.getByTestId('contactUsButton')).toBeVisible();
@@ -98,21 +93,24 @@ describe('Footer', () => {
       expect(screen.queryByTestId('accessibilityRequest')).toBeNull();
     });
     it('should show terms of service link', () => {
-      render(<Component updateVariable={['TERMS_OF_SERVICE_URL', 'termsofserviceurl']} />);
+      currentConfig = { ...config, TERMS_OF_SERVICE_URL: 'termsofserviceurl' };
+      render(<Component />);
       expect(screen.getByText('LMS')).toBeVisible();
       expect(screen.queryByTestId('termsOfService')).toBeVisible();
       expect(screen.queryByTestId('privacyPolicy')).toBeNull();
       expect(screen.queryByTestId('accessibilityRequest')).toBeNull();
     });
     it('should show privacy policy link', () => {
-      render(<Component updateVariable={['PRIVACY_POLICY_URL', 'privacypolicyurl']} />);
+      currentConfig = { ...config, PRIVACY_POLICY_URL: 'privacypolicyurl' };
+      render(<Component />);
       expect(screen.getByText('LMS')).toBeVisible();
       expect(screen.queryByTestId('termsOfService')).toBeNull();
       expect(screen.queryByTestId('privacyPolicy')).toBeVisible();
       expect(screen.queryByTestId('accessibilityRequest')).toBeNull();
     });
     it('should show accessibilty request link', () => {
-      render(<Component updateVariable={['SHOW_ACCESSIBILITY_PAGE', 'true']} />);
+      currentConfig = { ...config, SHOW_ACCESSIBILITY_PAGE: 'true' };
+      render(<Component />);
       expect(screen.getByText('LMS')).toBeVisible();
       expect(screen.queryByTestId('termsOfService')).toBeNull();
       expect(screen.queryByTestId('privacyPolicy')).toBeNull();
