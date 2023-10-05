@@ -1,14 +1,35 @@
+#############################
 frontend-component-footer-edx
-=============================
+#############################
 
 |Build Status| |npm_version| |npm_downloads| |license|
 |semantic-release|
 
+********
+Purpose
+********
+
 frontend-component-footer-edx is a library containing a site footer
 component for use when building edX frontend applications.
 
+Prerequisites
+=============
+
+The `devstack`_ is currently recommended as a development environment for your
+new MFE.  If you start it with ``make dev.up.lms`` that should give you
+everything you need as a companion to this frontend.
+
+Note that it is also possible to use `Tutor`_ to develop an MFE.  You can refer
+to the `relevant tutor-mfe documentation`_ to get started using it.
+
+.. _Devstack: https://github.com/openedx/devstack
+
+.. _Tutor: https://github.com/overhangio/tutor
+
+.. _relevant tutor-mfe documentation: https://github.com/overhangio/tutor-mfe#mfe-development
+
 Usage
------
+=====
 
 To install frontend-component-footer-edx into your project::
 
@@ -33,12 +54,12 @@ Component Usage::
 - supportedLanguages (optional)
 
 Requirements
-------------
+============
 
 This component uses ``@edx/frontend-i18n``. Any containing app must provide ``@edx/frontend-i18n`` as a peer dependency, and be wrapped inside an ``IntlProvider`` element, whether or not your consuming application is actually localized. For a basic default locale (English) version, follow the ``IntlProvider`` example in the sample application in `src/index.jsx <src/index.jsx>`__.
 
 Development
------------
+===========
 
 Start the dev server::
 
