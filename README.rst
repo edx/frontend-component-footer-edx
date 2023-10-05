@@ -53,6 +53,31 @@ Component Usage::
 - onLanguageSelected (optional)
 - supportedLanguages (optional)
 
+Cloning and Startup
+===================
+
+.. code-block::
+
+
+  1. Clone your new repo:
+
+    ``git clone https://github.com/openedx/frontend-component-footer-edx.git``
+
+  2. Use node v18.x.
+
+    The current version of the micro-frontend build scripts support node 18.
+    Using other major versions of node *may* work, but this is unsupported.  For
+    convenience, this repository includes an .nvmrc file to help in setting the
+    correct node version via `nvm <https://github.com/nvm-sh/nvm>`_.
+
+  3. Install npm dependencies:
+
+    ``cd frontend-component-footer-edx && npm ci``
+
+  4. Start the dev server:
+
+    ``npm start``
+
 Requirements
 ============
 
@@ -68,6 +93,19 @@ Start the dev server::
 Build the component::
 
    npm run build
+
+License
+=======
+
+The code in this repository is licensed under the AGPLv3 unless otherwise
+noted.
+
+Please see `LICENSE <LICENSE>`_ for details.
+
+Reporting Security Issues
+=========================
+
+Please do not report security issues in public. Please email security@openedx.org.
 
 .. |Build Status| image:: https://api.travis-ci.com/edx/frontend-component-footer-edx.svg?branch=master
    :target: https://travis-ci.com/edx/frontend-component-footer-edx
