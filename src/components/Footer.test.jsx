@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useMemo } from 'react';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { IntlProvider } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { AppContext } from '@edx/frontend-platform/react';
@@ -97,19 +97,19 @@ describe('<Footer />', () => {
       const config = {
         LOGO_TRADEMARK_URL: process.env.LOGO_TRADEMARK_URL,
       };
-      const wrapper = mount(<FooterWithoutLanguageSelector config={config} />);
-      const externalLinks = wrapper.find("a[target='_blank']");
+      const wrapper = render(<FooterWithoutLanguageSelector config={config} />);
+      const externalLinks = wrapper.container.querySelectorAll("a[target='_blank']");
 
       expect(externalLinks.length).not.toEqual(0);
 
       externalLinks.forEach((externalLink) => {
         const callIndex = sendTrackEvent.mock.calls.length;
-        externalLink.simulate('click');
+        fireEvent.click(externalLink);
         expect(sendTrackEvent.mock.calls[callIndex]).toEqual([
           EVENT_NAMES.FOOTER_LINK,
           {
             category: 'outbound_link',
-            label: externalLink.prop('href'),
+            label: externalLink.href,
           },
         ]);
       });
@@ -119,9 +119,9 @@ describe('<Footer />', () => {
   describe('handles language switching', () => {
     it('calls onLanguageSelected prop when a language is changed', () => {
       const mockHandleLanguageSelected = jest.fn();
-      const wrapper = mount(<FooterWithLanguageSelector onLanguageSelected={mockHandleLanguageSelected} />);
+      render(<FooterWithLanguageSelector onLanguageSelected={mockHandleLanguageSelected} />);
 
-      wrapper.find('form').simulate('submit', {
+      fireEvent.submit(screen.getByTestId('site-footer-submit-btn'), {
         target: {
           elements: {
             'site-footer-language-select': {
