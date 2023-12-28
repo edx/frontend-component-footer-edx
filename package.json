@@ -35,7 +35,7 @@
   "devDependencies": {
     "@edx/brand": "npm:@edx/brand-edx.org@2.1.2",
     "@edx/browserslist-config": "^1.1.1",
-    "@edx/frontend-build": "13.0.14",
+    "@openedx/frontend-build": "^13.0.19",
     "@edx/frontend-platform": "6.1.2",
     "@edx/reactifex": "2.2.0",
     "@testing-library/jest-dom": "^5.16.4",
@@ -51,7 +51,7 @@
     "redux": "4.2.1"
   },
   "dependencies": {
-    "@edx/paragon": "^21.3.1",
+    "@openedx/paragon": "^21.11.3",
     "@fortawesome/fontawesome-svg-core": "6.4.0",
     "@fortawesome/free-brands-svg-icons": "6.4.0",
     "@fortawesome/free-regular-svg-icons": "6.4.0",
