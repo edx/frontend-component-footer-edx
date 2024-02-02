@@ -54,6 +54,12 @@ const FooterWithLanguageSelector = ({ onLanguageSelected = () => {} }) => {
 };
 
 describe('<Footer />', () => {
+  beforeAll(() => {
+    const mockedDate = new Date(2023, 1, 1);
+    jest.useFakeTimers('modern');
+    jest.setSystemTime(mockedDate);
+  });
+
   describe('renders correctly', () => {
     it('renders without a language selector', () => {
       const config = { LOGO_TRADEMARK_URL: process.env.LOGO_TRADEMARK_URL };
