@@ -37,7 +37,7 @@
     "@edx/browserslist-config": "^1.1.1",
     "@edx/frontend-platform": "7.1.4",
     "@edx/reactifex": "2.2.0",
-    "@openedx/frontend-build": "^13.0.28",
+    "@openedx/frontend-build": "^14.0.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.1",
     "husky": "8.0.3",
