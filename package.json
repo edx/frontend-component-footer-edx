@@ -49,6 +49,7 @@
     "react-test-renderer": "17.0.2",
     "reactifex": "1.1.1",
     "redux": "4.2.1"
+    
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.4.0",
