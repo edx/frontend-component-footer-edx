@@ -2,7 +2,7 @@ import React from 'react';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import {
   faFacebookSquare,
-  faTwitterSquare,
+  faSquareXTwitter,
   faLinkedin,
   faRedditSquare,
   faInstagram,
@@ -20,9 +20,9 @@ const SocialIconLinks = ({ intl, ...props }) => {
       screenReaderText: intl.formatMessage(messages['footer.socialLinks.srText.facebook']),
     },
     {
-      title: 'Twitter',
+      title: 'X (formerly Twitter)',
       url: 'https://twitter.com/edXOnline',
-      icon: <FontAwesomeIcon icon={faTwitterSquare} className="social-icon" size="2x" />,
+      icon: <FontAwesomeIcon icon={faSquareXTwitter} className="social-icon" size="2x" />,
       screenReaderText: intl.formatMessage(messages['footer.socialLinks.srText.twitter']),
     },
     {
