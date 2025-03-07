@@ -8,8 +8,8 @@ const messages = defineMessages({
   },
   'footer.socialLinks.srText.twitter': {
     id: 'footer.socialLinks.srText.twitter',
-    defaultMessage: 'Follow edX on Twitter',
-    description: 'This is screenreader text for the edX Twitter social media link in the footer.',
+    defaultMessage: 'Follow edX on X (formerly Twitter)',
+    description: 'This is screenreader text for the edX X (formerly Twitter) media link in the footer.',
   },
   'footer.socialLinks.srText.youtube': {
     id: 'footer.socialLinks.srText.youtube',
