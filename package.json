@@ -39,14 +39,14 @@
     "@edx/reactifex": "2.2.0",
     "@openedx/frontend-build": "14.4.1",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^12.1.1",
+    "@testing-library/react": "^14.3.1",
     "husky": "9.1.7",
     "prop-types": "15.8.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-redux": "7.2.9",
     "react-router-dom": "6.30.0",
-    "react-test-renderer": "17.0.2",
+    "react-test-renderer": "18.3.1",
     "reactifex": "1.1.1",
     "redux": "4.2.1"
   },
@@ -63,7 +63,7 @@
     "@edx/frontend-platform": "^7.0.0 || ^8.0.0",
     "@openedx/paragon": ">= 21.11.3 < 23.0.0",
     "prop-types": "^15.7.0",
-    "react": "^16.9.0 || ^17.0.0",
-    "react-dom": "^16.9.0 || ^17.0.0"
+    "react": "^16.9.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.9.0 || ^17.0.0 || ^18.0.0"
   }
 }
