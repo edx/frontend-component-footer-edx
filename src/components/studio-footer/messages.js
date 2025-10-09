@@ -1,40 +1,35 @@
 import { defineMessages } from '@edx/frontend-platform/i18n';
 
 const messages = defineMessages({
-  openHelpButtonLabel: {
-    id: 'authoring.footer.help.openHelp.button.label',
-    defaultMessage: 'Looking for help with Studio?',
-    description: 'Label for button that opens the collapsed section with help buttons',
+  footerLabel: {
+    id: 'edx.authoring.footer.label',
+    defaultMessage: 'Edx Studio Footer',
+    description: 'Label text for studio(authoring) footer',
   },
-  closeHelpButtonLabel: {
-    id: 'authoring.footer.help.closeHelp.button.label',
-    defaultMessage: 'Hide Studio help',
-    description: 'Label for button that closes the collapsed section with help buttons',
+  studioLinkLabel: {
+    id: 'edx.authoring.footer.studio.link.label.text',
+    defaultMessage: 'Studio',
+    description: 'Link text for Studio in edx footer',
   },
-  edxDocumentationButtonLabel: {
-    id: 'authoring.footer.help.edxDocumentation.button.label',
+  lmsLinkLabel: {
+    id: 'edx.authoring.footer.lms.link.label.text',
+    defaultMessage: 'LMS',
+    description: 'Link text for LMS in edx footer',
+  },
+  releaseNotesLinkLabel: {
+    id: 'edx.authoring.footer.release_notes.link.label.text',
+    defaultMessage: 'Release notes',
+    description: 'Link text for Release notes in edx footer',
+  },
+  edxDocumentationLinkLabel: {
+    id: 'edx.authoring.footer.edx_documentation.link.label.text',
     defaultMessage: 'edX documentation',
-    description: 'Label for button that links to the edX documentation site',
+    description: 'Link text for edX documentation in edx footer',
   },
-  parnterPortalButtonLabel: {
-    id: 'authoring.footer.help.parnterPortal.button.label',
-    defaultMessage: 'edX partner portal',
-    description: 'Label for button that links to the edX partner portal',
-  },
-  edx101ButtonLabel: {
-    id: 'authoring.footer.help.edx101.button.label',
-    defaultMessage: 'Enroll in edX 101',
-    description: 'Label for button that links to the edX 101 course',
-  },
-  studioXButtonLabel: {
-    id: 'authoring.footer.help.studioX.button.label',
-    defaultMessage: 'Enroll in StudioX',
-    description: 'Label for button that links to the edX StudioX course',
-  },
-  contactUsButtonLabel: {
-    id: 'authoring.footer.help.contactUs.button.label',
+  contactUsLinkLabel: {
+    id: 'edx.authoring.footer.contact_us.link.label.text',
     defaultMessage: 'Contact us',
-    description: 'Label for button that links to the email for partner support',
+    description: 'Link text for Contact us in edx footer',
   },
   termsOfServiceLinkLabel: {
     id: 'authoring.footer.termsOfService.link.label',
@@ -53,7 +48,7 @@ const messages = defineMessages({
   },
   trademarkMessage: {
     id: 'authoring.footer.trademark.message',
-    defaultMessage: 'edX and Open edX, and the edX and Open edX logos are registered trademarks of',
+    defaultMessage: 'edX, Open edX, and the edX and Open edX logos are registered trademarks of ',
     description: 'Message about the use of logos and names edX and Open edX',
   },
 });

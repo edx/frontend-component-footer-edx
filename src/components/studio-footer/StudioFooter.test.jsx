@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useMemo } from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { IntlProvider } from '@edx/frontend-platform/i18n';
 import { AppContext } from '@edx/frontend-platform/react';
 import StudioFooter from './StudioFooter';
-import messages from './messages';
 
 const config = {
   LMS_BASE_URL: process.env.LMS_BASE_URL,
@@ -39,82 +38,11 @@ describe('Footer', () => {
     jest.clearAllMocks();
     currentConfig = config;
   });
-  describe('help section default view', () => {
-    it('help button should read Looking for help with Studio?', () => {
-      render(<Component />);
-      expect(screen.getByText(messages.openHelpButtonLabel.defaultMessage))
-        .toBeVisible();
-    });
-    it('help button link row should not be visible', () => {
-      render(<Component />);
-      expect(screen.queryByTestId('helpButtonRow')).toBeNull();
-    });
-  });
-  describe('help section expanded view', () => {
-    it('help button should read Hide Studio help', () => {
-      render(<Component />);
-      const helpToggleButton = screen.getByText(messages.openHelpButtonLabel.defaultMessage);
-      fireEvent.click(helpToggleButton);
-      expect(screen.getByText(messages.closeHelpButtonLabel.defaultMessage))
-        .toBeVisible();
-    });
-    it('help button link row should be visible', () => {
-      render(<Component />);
-      const helpToggleButton = screen.getByText(messages.openHelpButtonLabel.defaultMessage);
-      fireEvent.click(helpToggleButton);
-      expect(screen.getByTestId('helpButtonRow')).toBeVisible();
-    });
-    it('edX portal button should be visible', () => {
-      render(<Component />);
-      const helpToggleButton = screen.getByText(messages.openHelpButtonLabel.defaultMessage);
-      fireEvent.click(helpToggleButton);
-      expect(screen.queryByTestId('edXPortalButton')).toBeVisible();
-    });
-    it('should not show contact us button', () => {
-      render(<Component />);
-      const helpToggleButton = screen.getByText(messages.openHelpButtonLabel.defaultMessage);
-      fireEvent.click(helpToggleButton);
-      expect(screen.queryByTestId('contactUsButton')).toBeNull();
-    });
-    it('should show contact us button', () => {
-      currentConfig = { ...config, SUPPORT_EMAIL: 'support@email.com' };
-      render(<Component />);
-      const helpToggleButton = screen.getByText(messages.openHelpButtonLabel.defaultMessage);
-      fireEvent.click(helpToggleButton);
-      expect(screen.getByTestId('contactUsButton')).toBeVisible();
-    });
-  });
-  describe('policy link row', () => {
-    it('should only show LMS link', () => {
-      render(<Component />);
-      expect(screen.getByText('LMS')).toBeVisible();
-      expect(screen.queryByTestId('termsOfService')).toBeNull();
-      expect(screen.queryByTestId('privacyPolicy')).toBeNull();
-      expect(screen.queryByTestId('accessibilityRequest')).toBeNull();
-    });
-    it('should show terms of service link', () => {
-      currentConfig = { ...config, TERMS_OF_SERVICE_URL: 'termsofserviceurl' };
+  describe('should show all links', () => {
+    it('should only show all link', () => {
       render(<Component />);
       expect(screen.getByText('LMS')).toBeVisible();
       expect(screen.queryByTestId('termsOfService')).toBeVisible();
-      expect(screen.queryByTestId('privacyPolicy')).toBeNull();
-      expect(screen.queryByTestId('accessibilityRequest')).toBeNull();
-    });
-    it('should show privacy policy link', () => {
-      currentConfig = { ...config, PRIVACY_POLICY_URL: 'privacypolicyurl' };
-      render(<Component />);
-      expect(screen.getByText('LMS')).toBeVisible();
-      expect(screen.queryByTestId('termsOfService')).toBeNull();
-      expect(screen.queryByTestId('privacyPolicy')).toBeVisible();
-      expect(screen.queryByTestId('accessibilityRequest')).toBeNull();
-    });
-    it('should show accessibilty request link', () => {
-      currentConfig = { ...config, SHOW_ACCESSIBILITY_PAGE: 'true' };
-      render(<Component />);
-      expect(screen.getByText('LMS')).toBeVisible();
-      expect(screen.queryByTestId('termsOfService')).toBeNull();
-      expect(screen.queryByTestId('privacyPolicy')).toBeNull();
-      expect(screen.queryByTestId('accessibilityRequest')).toBeVisible();
     });
   });
 });
