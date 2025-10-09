@@ -1,17 +1,14 @@
-import React, { useContext, useState } from 'react';
-import _ from 'lodash';
-import { intlShape, injectIntl, FormattedMessage } from '@edx/frontend-platform/i18n';
+import React, { useContext } from 'react';
+import { useIntl } from '@edx/frontend-platform/i18n';
 import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
 import {
-  ActionRow,
-  Button,
   Container,
   Hyperlink,
   Image,
-  TransitionReplace,
+  MailtoLink,
 } from '@openedx/paragon';
-import { ExpandLess, ExpandMore, Help } from '@openedx/paragon/icons';
+import './StudioFooter.css';
 import messages from './messages';
 
 ensureConfig([
@@ -22,125 +19,69 @@ ensureConfig([
   'SUPPORT_EMAIL',
   'SITE_NAME',
   'STUDIO_BASE_URL',
-  'SHOW_ACCESSIBILITY_PAGE',
+  'LOGO_URL',
 ], 'Studio Footer component');
 
-const StudioFooter = ({
-  // injected
-  intl,
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
+const StudioFooter = () => {
+  const intl = useIntl();
   const { config } = useContext(AppContext);
 
   return (
-    <>
-      <div className="m-0 mt-6 row align-items-center justify-content-center">
-        <div className="col border-top mr-2" />
-        <Button
-          data-testid="helpToggleButton"
-          variant="outline-primary"
-          onClick={() => setIsOpen(!isOpen)}
-          iconBefore={Help}
-          iconAfter={isOpen ? ExpandLess : ExpandMore}
-          size="sm"
-        >
-          {isOpen ? intl.formatMessage(messages.closeHelpButtonLabel)
-            : intl.formatMessage(messages.openHelpButtonLabel)}
-        </Button>
-        <div className="col border-top ml-2" />
+    <footer
+      role="contentinfo"
+      aria-label={intl.formatMessage(messages.footerLabel)}
+      className="border-top shadow"
+      style={{ background: '#FFF' }}
+    >
+      <div>
+        <Container size="xl" className="p-4">
+          <div className="footer-links-row text-muted">
+            <Hyperlink className="footer-link footer-link-color" destination={`${config.BASE_URL}/home`}>{intl.formatMessage(messages.studioLinkLabel)}</Hyperlink>
+            <Hyperlink data-testid="LMS" className="footer-link footer-link-color" destination={config.LMS_BASE_URL}>{intl.formatMessage(messages.lmsLinkLabel)}</Hyperlink>
+            <Hyperlink className="footer-link footer-link-color" destination={`${config.BASE_URL}/release-notes`}>{intl.formatMessage(messages.releaseNotesLinkLabel)}</Hyperlink>
+            <Hyperlink className="footer-link footer-link-color" destination="https://docs.edx.org/">{intl.formatMessage(messages.edxDocumentationLinkLabel)}</Hyperlink>
+            <MailtoLink className="footer-link footer-link-color" to={config.SUPPORT_EMAIL}>{intl.formatMessage(messages.contactUsLinkLabel)}</MailtoLink>
+          </div>
+        </Container>
+        <div className="border-top" />
+        <Container size="xl" className="p-4">
+          <div className="footer-bottom-row">
+            <div className="footer-bottom-columns">
+              <div className="footer-bottom-col text-muted">
+                <div className="footer-links-row">
+                  <span className="footer-link footer-muted-text-color">© {new Date().getFullYear()} <Hyperlink className="footer-link footer-link-color" destination={config.MARKETING_SITE_BASE_URL}>{config.SITE_NAME}</Hyperlink>.</span>
+                  <Hyperlink data-testid="termsOfService" className="footer-link footer-link-color" destination={config.TERMS_OF_SERVICE_URL}>{intl.formatMessage(messages.termsOfServiceLinkLabel)}</Hyperlink>
+                  <Hyperlink className="footer-link footer-link-color" destination={config.PRIVACY_POLICY_URL}>{intl.formatMessage(messages.privacyPolicyLinkLabel)}</Hyperlink>
+                  <Hyperlink className="footer-link footer-link-color" destination={`${config.STUDIO_BASE_URL}/accessibility`}>
+                    {intl.formatMessage(messages.accessibilityRequestLinkLabel)}
+                  </Hyperlink>
+                </div>
+                <div>
+                  {/*
+                    Site operators: Please do not remove this paragraph! this attributes back to edX and
+                      makes your acknowledgement of edX's trademarks clear.
+                    Translators: 'edX' and 'Open edX' are trademarks of 'edX Inc.'. Please do not translate
+                      any of these trademarks and company names.
+                  */}
+                  <span className="footer-link footer-muted-text-color">{intl.formatMessage(messages.trademarkMessage)}<Hyperlink className="footer-link footer-link-color" destination="https://www.edx.org">edX Inc</Hyperlink>.</span>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <Hyperlink destination={config.MARKETING_SITE_BASE_URL}>
+                <Image
+                  src={config.LOGO_URL}
+                  alt="edX logo"
+                  height={32}
+                  className="footer-logo"
+                />
+              </Hyperlink>
+            </div>
+          </div>
+        </Container>
       </div>
-      <Container size="xl" className="px-4">
-        <TransitionReplace>
-          {isOpen ? (
-            <ActionRow key="help-link-button-row" className="py-4" data-testid="helpButtonRow">
-              <ActionRow.Spacer />
-              <Button as="a" href="https://docs.edx.org/" size="sm">
-                <FormattedMessage {...messages.edxDocumentationButtonLabel} />
-              </Button>
-              <Button
-                as="a"
-                href="https://partners.edx.org/"
-                size="sm"
-                data-testid="edXPortalButton"
-              >
-                <FormattedMessage {...messages.parnterPortalButtonLabel} />
-              </Button>
-              <Button
-                as="a"
-                href="https://www.edx.org/course/edx101-overview-of-creating-an-edx-course#.VO4eaLPF-n1"
-                size="sm"
-              >
-                <FormattedMessage {...messages.edx101ButtonLabel} />
-              </Button>
-              <Button
-                as="a"
-                href="https://www.edx.org/course/studiox-creating-a-course-with-edx-studio"
-                size="sm"
-              >
-                <FormattedMessage {...messages.studioXButtonLabel} />
-              </Button>
-              {!_.isEmpty(config.SUPPORT_EMAIL) && (
-                <Button
-                  as="a"
-                  href={`mailto:${config.SUPPORT_EMAIL}`}
-                  size="sm"
-                  data-testid="contactUsButton"
-                >
-                  <FormattedMessage {...messages.contactUsButtonLabel} />
-                </Button>
-              )}
-              <ActionRow.Spacer />
-            </ActionRow>
-          ) : null}
-        </TransitionReplace>
-        <ActionRow className="pt-3 m-0 x-small">
-          © {new Date().getFullYear()} <Hyperlink destination={config.MARKETING_BASE_URL} target="_blank" className="ml-2">{config.SITE_NAME}</Hyperlink>
-          <ActionRow.Spacer />
-          {!_.isEmpty(config.TERMS_OF_SERVICE_URL) && (
-            <Hyperlink destination={config.TERMS_OF_SERVICE_URL} data-testid="termsOfService">
-              {intl.formatMessage(messages.termsOfServiceLinkLabel)}
-            </Hyperlink>
-          )}{!_.isEmpty(config.PRIVACY_POLICY_URL) && (
-            <Hyperlink destination={config.PRIVACY_POLICY_URL} data-testid="privacyPolicy">
-              {intl.formatMessage(messages.privacyPolicyLinkLabel)}
-            </Hyperlink>
-          )}
-          {config.SHOW_ACCESSIBILITY_PAGE === 'true' && (
-            <Hyperlink
-              destination={`${config.STUDIO_BASE_URL}/accessibility`}
-              data-testid="accessibilityRequest"
-            >
-              {intl.formatMessage(messages.accessibilityRequestLinkLabel)}
-            </Hyperlink>
-          )}
-          <Hyperlink destination={config.LMS_BASE_URL}>LMS</Hyperlink>
-        </ActionRow>
-        <ActionRow className="mt-3 pb-4 x-small">
-          {/*
-            Site operators: Please do not remove this paragraph! this attributes back to edX and
-              makes your acknowledgement of edX's trademarks clear.
-            Translators: 'edX' and 'Open edX' are trademarks of 'edX Inc.'. Please do not translate
-              any of these trademarks and company names.
-          */}
-          <FormattedMessage {...messages.trademarkMessage} />
-          <Hyperlink className="ml-1" destination="https://www.edx.org">edX Inc</Hyperlink>.
-          <ActionRow.Spacer />
-          <Hyperlink destination="https://open.edx.org" className="float-right">
-            <Image
-              width="120px"
-              alt="Powered by Open edX"
-              src="https://logos.openedx.org/open-edx-logo-tag.png"
-            />
-          </Hyperlink>
-        </ActionRow>
-      </Container>
-    </>
+    </footer>
   );
 };
 
-StudioFooter.propTypes = {
-  // injected
-  intl: intlShape.isRequired,
-};
-
-export default injectIntl(StudioFooter);
+export default StudioFooter;
