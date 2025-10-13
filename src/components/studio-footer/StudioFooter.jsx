@@ -20,6 +20,7 @@ ensureConfig([
   'SITE_NAME',
   'STUDIO_BASE_URL',
   'LOGO_URL',
+  'ENABLE_RELEASE_NOTES',
 ], 'Studio Footer component');
 
 const StudioFooter = () => {
@@ -38,7 +39,7 @@ const StudioFooter = () => {
           <div className="footer-links-row text-muted">
             <Hyperlink className="footer-link footer-link-color" destination={`${config.BASE_URL}/home`}>{intl.formatMessage(messages.studioLinkLabel)}</Hyperlink>
             <Hyperlink data-testid="LMS" className="footer-link footer-link-color" destination={config.LMS_BASE_URL}>{intl.formatMessage(messages.lmsLinkLabel)}</Hyperlink>
-            <Hyperlink className="footer-link footer-link-color" destination={`${config.BASE_URL}/release-notes`}>{intl.formatMessage(messages.releaseNotesLinkLabel)}</Hyperlink>
+            {config.ENABLE_RELEASE_NOTES && <Hyperlink className="footer-link footer-link-color" destination={`${config.BASE_URL}/release-notes`}>{intl.formatMessage(messages.releaseNotesLinkLabel)}</Hyperlink>}
             <Hyperlink className="footer-link footer-link-color" destination="https://docs.edx.org/">{intl.formatMessage(messages.edxDocumentationLinkLabel)}</Hyperlink>
             <MailtoLink className="footer-link footer-link-color" to={config.SUPPORT_EMAIL}>{intl.formatMessage(messages.contactUsLinkLabel)}</MailtoLink>
           </div>
