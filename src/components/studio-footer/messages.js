@@ -3,7 +3,7 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   footerLabel: {
     id: 'edx.authoring.footer.label',
-    defaultMessage: 'Edx Studio Footer',
+    defaultMessage: 'edX studio footer',
     description: 'Label text for studio(authoring) footer',
   },
   studioLinkLabel: {
@@ -33,17 +33,17 @@ const messages = defineMessages({
   },
   termsOfServiceLinkLabel: {
     id: 'authoring.footer.termsOfService.link.label',
-    defaultMessage: 'Terms of Service',
+    defaultMessage: 'Terms of service',
     description: 'Label for button that links to the terms of service page',
   },
   privacyPolicyLinkLabel: {
     id: 'authoring.footer.privacyPolicy.link.label',
-    defaultMessage: 'Privacy Policy',
+    defaultMessage: 'Privacy policy',
     description: 'Label for button that links to the privacy policy page',
   },
   accessibilityRequestLinkLabel: {
     id: 'authoring.footer.accessibilityRequest.link.label',
-    defaultMessage: 'Accessibility Accomodation Request',
+    defaultMessage: 'Accessibility accomodation request',
     description: 'Label for button that links to the accessibility accomodation requests page',
   },
   trademarkMessage: {
