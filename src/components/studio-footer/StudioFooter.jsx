@@ -31,9 +31,15 @@ const StudioFooter = () => {
     <footer
       role="contentinfo"
       aria-label={intl.formatMessage(messages.footerLabel)}
-      className="border-top shadow"
-      style={{ background: '#FFF' }}
     >
+      <div
+        style={{
+          height: '1px',
+          flexShrink: 0,
+          alignSelf: 'stretch',
+          background: 'var(--Light-500, #E1DDD2)',
+        }}
+      />
       <div>
         <Container size="xl" className="p-4">
           <div className="footer-links-row text-muted">
@@ -44,7 +50,14 @@ const StudioFooter = () => {
             <MailtoLink className="footer-link footer-link-color" to={config.SUPPORT_EMAIL}>{intl.formatMessage(messages.contactUsLinkLabel)}</MailtoLink>
           </div>
         </Container>
-        <div className="border-top" />
+        <div
+          style={{
+            height: '1px',
+            flexShrink: 0,
+            alignSelf: 'stretch',
+            background: 'var(--Light-300, #EDEBE4)',
+          }}
+        />
         <Container size="xl" className="p-4">
           <div className="footer-bottom-row">
             <div className="footer-bottom-columns">

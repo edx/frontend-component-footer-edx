@@ -13,8 +13,12 @@
   line-height: 20px;
 }
 
-.footer-link-color {
-  color: #00262B;
+.footer-link-color,
+.footer-link-color:hover,
+.footer-link-color:focus,
+.footer-link-color:active,
+.footer-link-color:visited {
+  color: #00262B !important;
 }
 
 .footer-muted-text-color {
