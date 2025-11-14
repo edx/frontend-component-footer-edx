@@ -31,6 +31,7 @@ const StudioFooter = () => {
     <footer
       role="contentinfo"
       aria-label={intl.formatMessage(messages.footerLabel)}
+      className="studio-footer"
     >
       <div
         style={{

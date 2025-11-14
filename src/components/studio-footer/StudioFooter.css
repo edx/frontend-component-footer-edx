@@ -6,6 +6,10 @@
   gap: 3rem;
 }
 
+.studio-footer {
+  background: white;
+}
+
 .footer-link {
   font-size: 14px;
   font-style: normal;
