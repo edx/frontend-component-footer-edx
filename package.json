@@ -48,7 +48,7 @@
     "react-router-dom": "6.30.3",
     "react-test-renderer": "18.3.1",
     "reactifex": "1.1.1",
-    "redux": "4.2.1"
+    "redux": "5.0.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.7.2",
