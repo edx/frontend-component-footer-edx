@@ -45,7 +45,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-redux": "7.2.9",
-    "react-router-dom": "6.30.3",
+    "react-router-dom": "7.13.0",
     "react-test-renderer": "18.3.1",
     "reactifex": "1.1.1",
     "redux": "4.2.1"
